@@ -10,7 +10,8 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 2** | Path Anatomy Deep Dive | Breaking down asset paths using `.name`, `.stem`, and `.suffix` properties. | ✅ Done |
 | **Day 3** | Directory Hierarchy Navigation | Traversing parent and grandparent folder levels dynamically using `.parent`. | ✅ Done |
 | **Day 4** | Path Validation & Verification | Confirming item existence and distinguishing files from directories safely. | ✅ Done |
-| **Day 5** | *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 5** | Idiomatic Path Joining | Constructing complex cross-platform paths cleanly using the `/` operator. | ✅ Done |
+| **Day 6** | *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
@@ -40,6 +41,11 @@ When managing complex game dev asset structures, you frequently need to find whe
 
 ### Day 4: Path Validation
 Before running automation scripts that modify, copy, or delete assets, verifying that target files or folders actually exist prevents script crashes. `pathlib` handles this with built-in validation methods:
-* **`.exists()`**: Returns `True` if the path points to an actual file or directory on the system, and `False` if it does not (like looking for a missing asset).
-* **`.is_file()`**: Returns `True` only if the path points explicitly to a file, preventing your code from accidentally treating directories like individual assets.
-* **`.is_dir()`**: Returns `True` if the path is a folder/directory. Passing an empty string `Path("")` represents the current working directory, which evaluates correctly as a directory (`.`).
+* **`.exists()`**: Returns `True` if the path points to an actual file or directory on the system.
+* **`.is_file()`**: Returns `True` only if the path points explicitly to a file.
+* **`.is_dir()`**: Returns `True` if the path is a folder/directory.
+
+### Day 5: Cross-Platform Path Joining
+Hardcoding path separators like backward slashes (`\`) for Windows or forward slashes (`/`) for Linux/Mac makes scripts fragile and error-prone. `pathlib` solves this elegantly by overloading the division (`/`) operator to combine paths:
+* **The `/` Operator:** When at least one side is a `Path` object, you can link directory paths, sub-folders, and final asset names using `/` (e.g., `engine_content_dir / sub_folder / "T_Brick_Wall_D.png"`).
+* **Smart Handling:** Python automatically identifies the host operating system and injects the correct system-specific separator behind the scenes, ensuring the pipeline runs perfectly anywhere.
