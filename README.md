@@ -11,7 +11,8 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 3** | Directory Hierarchy Navigation | Traversing parent and grandparent folder levels dynamically using `.parent`. | ✅ Done |
 | **Day 4** | Path Validation & Verification | Confirming item existence and distinguishing files from directories safely. | ✅ Done |
 | **Day 5** | Idiomatic Path Joining | Constructing complex cross-platform paths cleanly using the `/` operator. | ✅ Done |
-| **Day 6** | *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 6** | Immutable Path Modification | Swapping file components and suffixes immutably using path-transformation methods. | ✅ Done |
+| **Day 7** | *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
@@ -46,6 +47,12 @@ Before running automation scripts that modify, copy, or delete assets, verifying
 * **`.is_dir()`**: Returns `True` if the path is a folder/directory.
 
 ### Day 5: Cross-Platform Path Joining
-Hardcoding path separators like backward slashes (`\`) for Windows or forward slashes (`/`) for Linux/Mac makes scripts fragile and error-prone. `pathlib` solves this elegantly by overloading the division (`/`) operator to combine paths:
-* **The `/` Operator:** When at least one side is a `Path` object, you can link directory paths, sub-folders, and final asset names using `/` (e.g., `engine_content_dir / sub_folder / "T_Brick_Wall_D.png"`).
-* **Smart Handling:** Python automatically identifies the host operating system and injects the correct system-specific separator behind the scenes, ensuring the pipeline runs perfectly anywhere.
+Hardcoding path separators like backward slashes (`\`) or forward slashes (`/`) makes scripts fragile and error-prone. `pathlib` solves this elegantly by overloading the division (`/`) operator to combine paths:
+* **The `/` Operator:** Link directory paths, sub-folders, and final asset names using `/` (e.g., `engine_content_dir / sub_folder / "T_Brick_Wall_D.png"`).
+* **Smart Handling:** Python automatically identifies the host operating system and injects the correct system-specific separator.
+
+### Day 6: Immutable Path Modifications & Swapping
+When constructing asset pipelines, you frequently need to generate paths for derivative or processed files (e.g., converting a raw `.png` texture map into an engine-optimized `.uasset`, or a source `.fbx` mesh into an interim `.obj`). `pathlib` provides incredibly robust path-manipulation techniques that return entirely new path objects without altering the original baseline path:
+* **`.with_name("new_name.ext")`**: Retains the exact directory hierarchy but swaps out the final file name and extension entirely. This eliminates string replacement or manual boundary slice calculations.
+* **`.with_suffix(".new_ext")`**: Preserves the parent directories and the target filename, swapping out only the trailing extension (including the leading dot).
+* **Method Chaining:** Because each of these functions cleanly yields a fresh `Path` object, you can sequentially chain methods together (e.g., `original_path.with_name("mesh.fbx").with_suffix(".obj")`) to transform file anatomy components in a single readable line of code.
