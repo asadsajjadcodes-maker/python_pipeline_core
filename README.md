@@ -12,7 +12,8 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 4** | Path Validation & Verification | Confirming item existence and distinguishing files from directories safely. | ✅ Done |
 | **Day 5** | Idiomatic Path Joining | Constructing complex cross-platform paths cleanly using the `/` operator. | ✅ Done |
 | **Day 6** | Immutable Path Modification | Swapping file components and suffixes immutably using path-transformation methods. | ✅ Done |
-| **Day 7** | *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 7** | Directory Scanning & Iteration | Automating batch tasks by scanning directories and filtering items with `.iterdir()`. | ✅ Done |
+| **Day 8** | *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
@@ -48,11 +49,16 @@ Before running automation scripts that modify, copy, or delete assets, verifying
 
 ### Day 5: Cross-Platform Path Joining
 Hardcoding path separators like backward slashes (`\`) or forward slashes (`/`) makes scripts fragile and error-prone. `pathlib` solves this elegantly by overloading the division (`/`) operator to combine paths:
-* **The `/` Operator:** Link directory paths, sub-folders, and final asset names using `/` (e.g., `engine_content_dir / sub_folder / "T_Brick_Wall_D.png"`).
+* **The `/` Operator:** Link directory paths, sub-folders, and final asset names using `/`.
 * **Smart Handling:** Python automatically identifies the host operating system and injects the correct system-specific separator.
 
 ### Day 6: Immutable Path Modifications & Swapping
-When constructing asset pipelines, you frequently need to generate paths for derivative or processed files (e.g., converting a raw `.png` texture map into an engine-optimized `.uasset`, or a source `.fbx` mesh into an interim `.obj`). `pathlib` provides incredibly robust path-manipulation techniques that return entirely new path objects without altering the original baseline path:
-* **`.with_name("new_name.ext")`**: Retains the exact directory hierarchy but swaps out the final file name and extension entirely. This eliminates string replacement or manual boundary slice calculations.
-* **`.with_suffix(".new_ext")`**: Preserves the parent directories and the target filename, swapping out only the trailing extension (including the leading dot).
-* **Method Chaining:** Because each of these functions cleanly yields a fresh `Path` object, you can sequentially chain methods together (e.g., `original_path.with_name("mesh.fbx").with_suffix(".obj")`) to transform file anatomy components in a single readable line of code.
+When constructing asset pipelines, you frequently need to generate paths for derivative or processed files. `pathlib` provides path-manipulation techniques that return entirely new path objects without altering the original baseline path:
+* **`.with_name("new_name.ext")`**: Retains the exact directory hierarchy but swaps out the final file name and extension entirely.
+* **`.with_suffix(".new_ext")`**: Preserves the parent directories and the target filename, swapping out only the trailing extension.
+* **Method Chaining:** Sequentially link methods together (e.g., `path.with_name("mesh.fbx").with_suffix(".obj")`) to transform file anatomy components in a single readable line.
+
+### Day 7: Scanning Directories with Iterdir
+To automate batch processes—such as converting an entire folder of textures or checking a workspace for invalid assets—you must look inside directories dynamically. 
+* **`.iterdir()`**: Yields an iterator containing `Path` objects for every item inside that directory. Unlike older approaches like `os.listdir()` (which only return plain strings), `.iterdir()` directly returns active `Path` objects.
+* **Combining with Filters:** By looping through an `.iterdir()` sequence and wrapping it in conditional checks (like `if item.is_file()`), scripts can instantly skip over nested sub-folders (`new_folder`) to isolate and operate only on target files.
