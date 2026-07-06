@@ -13,7 +13,8 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 5** | Idiomatic Path Joining | Constructing complex cross-platform paths cleanly using the `/` operator. | ✅ Done |
 | **Day 6** | Immutable Path Modification | Swapping file components and suffixes immutably using path-transformation methods. | ✅ Done |
 | **Day 7** | Directory Scanning & Iteration | Automating batch tasks by scanning directories and filtering items with `.iterdir()`. | ✅ Done |
-| **Day 8** | *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 8** | Pattern Matching with Glob | Filtering files dynamically using pattern-based matching with `.glob()`. | ✅ Done |
+| **Day 9** | *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
@@ -59,6 +60,13 @@ When constructing asset pipelines, you frequently need to generate paths for der
 * **Method Chaining:** Sequentially link methods together (e.g., `path.with_name("mesh.fbx").with_suffix(".obj")`) to transform file anatomy components in a single readable line.
 
 ### Day 7: Scanning Directories with Iterdir
-To automate batch processes—such as converting an entire folder of textures or checking a workspace for invalid assets—you must look inside directories dynamically. 
-* **`.iterdir()`**: Yields an iterator containing `Path` objects for every item inside that directory. Unlike older approaches like `os.listdir()` (which only return plain strings), `.iterdir()` directly returns active `Path` objects.
-* **Combining with Filters:** By looping through an `.iterdir()` sequence and wrapping it in conditional checks (like `if item.is_file()`), scripts can instantly skip over nested sub-folders (`new_folder`) to isolate and operate only on target files.
+To automate batch processes, you must look inside directories dynamically. 
+* **`.iterdir()`**: Yields an iterator containing `Path` objects for every single item inside that directory, including folders and hidden configurations.
+* **Combining with Filters:** By looping through an `.iterdir()` sequence and wrapping it in conditional checks (like `if item.is_file()`), scripts can instantly skip over nested sub-folders to isolate and operate only on target files.
+
+### Day 8: Pattern Matching via Globbing
+While `iterdir()` captures every single element within a folder, pipeline scripts often only care about specific asset types (e.g., extracting only Python scripts, FBX meshes, or PNG textures). `pathlib` offers an elegant, built-in pattern matcher called `.glob()` to handle this cleanly:
+* **`current_repo.glob("*.py")`**: Uses the wildcard character `*` to fetch *only* items ending in `.py`.
+* **Efficiency Boost:** This pattern eliminates the need to manually fetch all items and run subsequent `if item.suffix == ".py"` logical checks. It returns an iterator yielding matching path objects directly, making asset ingestion pipelines significantly faster and cleaner.
+
+---
