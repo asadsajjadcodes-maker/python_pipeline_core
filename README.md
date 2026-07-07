@@ -14,7 +14,9 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 6** | Immutable Path Modification | Swapping file components and suffixes immutably using path-transformation methods. | ✅ Done |
 | **Day 7** | Directory Scanning & Iteration | Automating batch tasks by scanning directories and filtering items with `.iterdir()`. | ✅ Done |
 | **Day 8** | Pattern Matching with Glob | Filtering files dynamically using pattern-based matching with `.glob()`. | ✅ Done |
-| **Day 9** | *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 9** | Robust Folder Creation | Generating nested directory trees dynamically on disk using `.mkdir()`. | ✅ Done |
+| **Day 10**| Active File Relocation & Writing | Writing files, verifying destination workspaces, and moving assets using `.rename()`. | ✅ Done |
+| **Day 11**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
@@ -65,7 +67,19 @@ To automate batch processes, you must look inside directories dynamically.
 * **Combining with Filters:** By looping through an `.iterdir()` sequence and wrapping it in conditional checks (like `if item.is_file()`), scripts can instantly skip over nested sub-folders to isolate and operate only on target files.
 
 ### Day 8: Pattern Matching via Globbing
-While `iterdir()` captures every single element within a folder, pipeline scripts often only care about specific asset types (e.g., extracting only Python scripts, FBX meshes, or PNG textures). `pathlib` offers an elegant, built-in pattern matcher called `.glob()` to handle this cleanly:
-* **`current_repo.glob("*.py")`**: Uses the wildcard character `*` to fetch *only* items ending in `.py`.
-* **Efficiency Boost:** This pattern eliminates the need to manually fetch all items and run subsequent `if item.suffix == ".py"` logical checks. It returns an iterator yielding matching path objects directly, making asset ingestion pipelines significantly faster and cleaner.
+While `iterdir()` captures every single element within a folder, pipeline scripts often only care about specific asset types. `pathlib` offers an elegant, built-in pattern matcher called `.glob()` to handle this cleanly:
+* **`current_repo.glob("*.py")`**: Uses the wildcard character `*` to fetch *only* items matching a specific extension or name criteria.
+* **Efficiency Boost:** This pattern eliminates the need to manually fetch all items and run subsequent string or suffix logical checks, filtering the stream directly.
+
+### Day 9: Safe and Deep Directory Creation
+When pipelines automatically export files, you must make sure the targeted save directories exist on your machine before hitting write commands. `pathlib` provides `.mkdir()` to manipulate your system storage directly:
+* **`.mkdir()`**: Instructs the operating system to construct a physical directory at the initialized path.
+* **`parents=True`**: Forces Python to sequentially build every missing parent folder in the tree automatically.
+* **`exist_ok=True`**: Turns it into an idempotent action—if the directory is already configured on disk, Python skips past gracefully without blowing up your automation pipeline.
+
+### Day 10: Writing Data and Relocating Pipeline Assets
+With foundational workspace checking and folder manipulation mastered, an automation pipeline must handle actual asset generation and moving procedures safely:
+* **`.write_text("Data")`**: Directly opens a path, dumps string context inside it, and closes the stream in a single high-level action. Perfect for generating runtime logs, setting parameters, or building dummy manifests.
+* **`.rename(destination_path)`**: Physically relocates a file or directory from its source path to a targeted destination path. 
+* **Pipeline Safety Check:** Combining `.exists()` validation checks prior to running a `.rename()` function ensures that missing storage trees are automatically initialized via `.mkdir(parents=True)` first. This design pattern completely prevents file migration crashes.
 
