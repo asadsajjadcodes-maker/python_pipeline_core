@@ -69,4 +69,3 @@ While `iterdir()` captures every single element within a folder, pipeline script
 * **`current_repo.glob("*.py")`**: Uses the wildcard character `*` to fetch *only* items ending in `.py`.
 * **Efficiency Boost:** This pattern eliminates the need to manually fetch all items and run subsequent `if item.suffix == ".py"` logical checks. It returns an iterator yielding matching path objects directly, making asset ingestion pipelines significantly faster and cleaner.
 
----
