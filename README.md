@@ -16,7 +16,8 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 8** | Pattern Matching with Glob | Filtering files dynamically using pattern-based matching with `.glob()`. | ✅ Done |
 | **Day 9** | Robust Folder Creation | Generating nested directory trees dynamically on disk using `.mkdir()`. | ✅ Done |
 | **Day 10**| Active File Relocation & Writing | Writing files, verifying destination workspaces, and moving assets using `.rename()`. | ✅ Done |
-| **Day 11**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 11**| Safe File I/O & Streaming | Appending persistent log metadata and reading files securely using context managers. | ✅ Done |
+| **Day 12**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
@@ -83,3 +84,9 @@ With foundational workspace checking and folder manipulation mastered, an automa
 * **`.rename(destination_path)`**: Physically relocates a file or directory from its source path to a targeted destination path. 
 * **Pipeline Safety Check:** Combining `.exists()` validation checks prior to running a `.rename()` function ensures that missing storage trees are automatically initialized via `.mkdir(parents=True)` first. This design pattern completely prevents file migration crashes.
 
+### Day 11: Context Managers & Safe File Streaming (File I/O)
+When writing log frameworks or exporting pipeline asset histories, open system streams must be managed meticulously to prevent memory leaks and file corruption:
+* **`with open(...)` Context Manager:** Guarantees that the underlying file buffer stream closes cleanly immediately after the nested code block completes execution, even if runtime syntax exceptions occur mid-stream.
+* **Append Mode (`mode="a"`)**: Opens an asset file for writing without erasing historic telemetry. New input strings generated via `.write()` are pushed strictly to the tail end of the file data—critical for sequential engine export manifests.
+* **Read Mode (`mode="r"`) & Iteration:** Opens files strictly for data ingestion. Accessing lines sequentially via a `for line in f:` syntax structure sweeps entries row-by-row, while string cleanup tools like `.strip()` truncate annoying trailing carriage returns (`\n`) or loose padding spaces cleanly.
+* **Explicit Encoding (`encoding="utf-8"`)**: Enforcing text formatting standardizations explicit within file interaction pipelines protects pipeline structures from throwing multi-platform decoding errors when handling complex asset metadata scripts.
