@@ -1,0 +1,4 @@
+=== Unreal engine pipeline log ===
+Asset name: SM_Castle_Gate
+Status: Successfully Exported to FBX
+Timestamp: 12:30:00
