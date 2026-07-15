@@ -20,26 +20,27 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 12**| Structured Log Parsing | Dissecting key-value metadata dynamically from raw text strings using controlled splits. | ✅ Done |
 | **Day 13**| Conditional Log Searching | Building automated QA keyword scanners to sweep log files for specific statuses. | ✅ Done |
 | **Day 14**| In-Memory Data Replacing | Reading files and dynamically modifying layout configurations using string replacements. | ✅ Done |
-| **Day 15**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 15**| JSON Data Serialization | Serializing structured dictionary metadata directly into formatted JSON configs using `json.dump()`. | ✅ Done |
+| **Day 16**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
 ## 🛠️ Tech Stack & Core Modules
 * **Language:** Python 3.13+
 * **Core Modules Used:** * `pathlib` (Object-oriented filesystem paths)
+  * `json` (JavaScript Object Notation encoder and decoder)
 
 ---
 
 ## 📖 Lessons Learned
 
-### Day 1 to Day 13: Core Automation & Text Search
-* **Path Management:** Advanced from raw strings to platform-agnostic directory handling, validation checks, deep directory building with `.mkdir(parents=True)`, and pattern filtering with `.glob()`.
-* **Resource Context & Parsing:** Implemented safe file operations using `with open()` context managers, limited splits via `.split(maxsplit=1)` to handle timestamps safely, and used `.lower()` with membership operators (`in`) to create case-insensitive search logic for QA reporting.
+### Day 1 to Day 14: Path Automation & Text Processing
+* **Path Operations:** Mastered `pathlib.Path` structures, relative traversing, safe disk checks, wildcard pattern matching via `.glob()`, and safe nested directory initialization with `.mkdir(parents=True, exist_ok=True)`.
+* **Resource Context & String Parsing:** Built robust streaming channels using `with open()`, handled key-value split limits via `maxsplit=1`, designed QA scanners using `.lower()`, and performed in-memory text updates via `.replace()`.
 
-### Day 14: Reading, Modifying, and Replacing Data
-As automation pipelines grow, they frequently need to update configuration values, patch asset names in text files, or fix outdated metadata keys without manual human intervention:
-* **Whole-File Ingestion (`.read()`)**: While looping through a file line-by-line is perfect for scanning and parsing, calling `.read()` directly on a file context pulls the entire file contents into a single string variable, making global text replacements easy.
-* **String Replacements (`.replace("old", "new")`)**: Python's native `.replace()` method sweeps through the string and cleanly swaps target values (e.g., updating asset name `"SM_Castle_Gate"` to `"SM_Castle_Gate_V02"`) instantly. Because strings are immutable, this generates a brand-new modified string while keeping your original variables safe.
-* **Pipeline Applications**: This is a core technique used for rewriting asset paths, modifying environment configurations dynamically, or bulk renaming references inside scene files, settings files, or logs.
+### Day 15: Structured Configuration Management (JSON Serialization)
+While plain text logs are great for visual verification, production software architectures rely on standardized structured formats like JSON (JavaScript Object Notation) to store complex asset settings, mesh properties, and environment profiles:
+* **Python Dictionaries to JSON Objects**: Python dictionaries align natively with JSON objects. Passing asset data containing key types such as integers, booleans, lists, and strings allows complex nested configurations to be preserved cleanly.
+* **Stream Serialization (`json.dump(obj, fp)`)**: Instead of manually formatting string brackets or key quotes, `json.dump()` converts Python dictionary structures into valid JSON schema directly over an open file buffer context stream (`mode="w"`).
+* **Pretty Printing (`indent=4`)**: Supplying the `indent=4` keyword argument forces the JSON serializer to output clean, line-broken, and properly indented code structures instead of a single compressed raw data line. This makes generated config files easily human-readable and git-diff friendly.
 
----

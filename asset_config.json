@@ -1,0 +1,11 @@
+{
+    "asset_name": "SM_Castle_Gate_V02",
+    "vertex_count": 14205,
+    "has_collision": true,
+    "lod_settings": [
+        "LOD_0",
+        "LOD_1",
+        "LOD_2"
+    ],
+    "export_directory": "Unreal_Exports/Textures"
+}
