@@ -19,7 +19,8 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 11**| Safe File I/O & Streaming | Appending persistent log metadata and reading files securely using context managers. | ✅ Done |
 | **Day 12**| Structured Log Parsing | Dissecting key-value metadata dynamically from raw text strings using controlled splits. | ✅ Done |
 | **Day 13**| Conditional Log Searching | Building automated QA keyword scanners to sweep log files for specific statuses. | ✅ Done |
-| **Day 14**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 14**| In-Memory Data Replacing | Reading files and dynamically modifying layout configurations using string replacements. | ✅ Done |
+| **Day 15**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
@@ -31,13 +32,14 @@ A repository dedicated to mastering Python automation, core programming workflow
 
 ## 📖 Lessons Learned
 
-### Day 1 to Day 12: Path and Parsing Foundations
-* **Path Management:** Progressed from `pathlib.Path` configurations, structural traversing, safe validation routines, pattern filters via `.glob()`, and idempotent folder trees via `.mkdir(parents=True, exist_ok=True)`.
-* **Resource Context Manipulation:** Mastered basic string partitioning via `.split(maxsplit=1)` and managed raw multi-platform file stream architectures securely via text context blocks.
+### Day 1 to Day 13: Core Automation & Text Search
+* **Path Management:** Advanced from raw strings to platform-agnostic directory handling, validation checks, deep directory building with `.mkdir(parents=True)`, and pattern filtering with `.glob()`.
+* **Resource Context & Parsing:** Implemented safe file operations using `with open()` context managers, limited splits via `.split(maxsplit=1)` to handle timestamps safely, and used `.lower()` with membership operators (`in`) to create case-insensitive search logic for QA reporting.
 
-### Day 13: Conditional Stream Querying & Automated QA Scanning
-When dealing with massive production log outputs, pipeline managers must programmatically scan text logs for specific system errors, successes, or alerts instead of auditing files line-by-line:
-* **Case Insensitivity Safeguards (`.lower()`)**: Hardcoded string lookups often fail if a script logs `"ERROR"`, `"error"`, or `"Error"`. Normalizing lines on ingest using `line.lower()` guarantees condition structures reliably intercept targets regardless of system formatting inconsistencies.
-* **Substring Membership Testing (`in` Operator)**: Using Python's native `in` evaluation allows fast, highly readable text inspection to trace whether critical pipeline markers exist within rows.
-* **Visual Status Reporting & QA Flags**: Incorporating custom tracking parameters—such as matching success statements with green operational flags (🟢) or failure statements with red indicators (🔴)—turns a dense console stream into an easily readable visual audit board.
+### Day 14: Reading, Modifying, and Replacing Data
+As automation pipelines grow, they frequently need to update configuration values, patch asset names in text files, or fix outdated metadata keys without manual human intervention:
+* **Whole-File Ingestion (`.read()`)**: While looping through a file line-by-line is perfect for scanning and parsing, calling `.read()` directly on a file context pulls the entire file contents into a single string variable, making global text replacements easy.
+* **String Replacements (`.replace("old", "new")`)**: Python's native `.replace()` method sweeps through the string and cleanly swaps target values (e.g., updating asset name `"SM_Castle_Gate"` to `"SM_Castle_Gate_V02"`) instantly. Because strings are immutable, this generates a brand-new modified string while keeping your original variables safe.
+* **Pipeline Applications**: This is a core technique used for rewriting asset paths, modifying environment configurations dynamically, or bulk renaming references inside scene files, settings files, or logs.
 
+---
