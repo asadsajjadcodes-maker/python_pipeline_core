@@ -22,7 +22,8 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 14**| In-Memory Data Replacing | Reading files and dynamically modifying layout configurations using string replacements. | ✅ Done |
 | **Day 15**| JSON Data Serialization | Serializing structured dictionary metadata directly into formatted JSON configs using `json.dump()`. | ✅ Done |
 | **Day 16**| JSON Ingestion & Guardrails | Deserializing JSON structures with `json.load()`, type validation, and graceful `sys.exit()` terminations. | ✅ Done |
-| **Day 17**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 17**| Dynamic JSON Configuration Editing | Modifying in-memory JSON configurations dynamically and saving updates via a Read-Modify-Write workflow. | ✅ Done |
+| **Day 18**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
@@ -37,13 +38,15 @@ A repository dedicated to mastering Python automation, core programming workflow
 
 ## 📖 Lessons Learned
 
-### Day 1 to Day 15: Path Automation, File I/O & JSON Serialization
-* **Path & Directory Mechanics:** Mastered dynamic path navigation, validation routines, wildcard matching via `.glob()`, and safe idempotent tree creation using `.mkdir(parents=True, exist_ok=True)`.
-* **Streaming & Data Processing:** Built safe streaming channels with `with open()`, constructed key-value log parsers with `maxsplit=1`, developed case-insensitive search scripts, and serialized Python dictionary objects into clean, indented JSON files via `json.dump()`.
+### Day 1 to Day 16: Path Automation & JSON Foundations
+* **Path & Directory Operations:** Mastered `pathlib.Path` objects, wildcard search mechanics via `.glob()`, deep path navigation, and idempotent directory creation via `.mkdir(parents=True, exist_ok=True)`.
+* **Streaming & JSON I/O:** Built stream-safe file handlers with `with open()`, engineered string lookups using `.lower()`, and handled single-file JSON serialization (`json.dump()`) and deserialization (`json.load()`) alongside defensive `sys.exit()` error guardrails.
 
-### Day 16: Deserialization, Native Data Restorations, and System Guardrails
-Reading external configurations safely back into Python code completes the full cycle of pipeline data persistence:
-* **JSON Deserialization (`json.load(fp)`)**: Converts JSON schema strings from a file directly back into native Python objects (dictionaries, lists, integers, booleans) without requiring manual string conversion or parsing.
-* **Automatic Type Restoration**: Native types stored in JSON retain their proper Python datatypes upon ingestion. A JSON boolean `true` automatically reconstructs as Python's `<class 'bool'>` (`True`), allowing immediate boolean logical checks in pipeline scripts without string casts.
-* **Graceful Exit Guardrails (`sys.exit(1)`)**: Checking if a configuration file exists via `.exists()` *before* opening prevents unhandled `FileNotFoundError` exceptions. Calling `sys.exit(1)` terminates execution immediately with an explicit non-zero exit code, communicating script failure cleanly to parent automation orchestrators or CI/CD pipelines.
+### Day 17: In-Memory JSON Modifications & Read-Modify-Write Cycle
+Updating persistent configuration state on disk is a core requirement for automated pipelines (e.g., updating mesh vertex counts after a LOD optimization pass or flagging asset compilation flags):
+* **The Read-Modify-Write Design Pattern**:
+  1. **Read:** Ingest the existing disk state into memory using `json.load()` within a read-stream block (`mode="r"`).
+  2. **Modify:** Mutate dictionary keys (`config_data["vertex_count"] = 9999`) or inject new key-value tracking pairs (`config_data["optimization_completed"] = True`) natively in memory.
+  3. **Write:** Re-open the target file in write mode (`mode="w"`) and overwrite disk storage with `json.dump(config_data, f, indent=4)`.
+* **Dynamic Key Injection**: Because deserialized JSON objects behave as standard Python dictionaries, inserting new tracking metadata keys requires no schema pre-definition—assigning a value to a new key updates the structure automatically prior to serialization.
 
