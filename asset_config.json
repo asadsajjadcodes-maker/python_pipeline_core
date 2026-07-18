@@ -1,12 +1,23 @@
 {
     "asset_name": "SM_Castle_Gate_V02",
-    "vertex_count": 9999,
-    "has_collision": false,
+    "vertex_count": 14205,
+    "has_collision": true,
     "lod_settings": [
         "LOD_0",
         "LOD_1",
         "LOD_2"
     ],
     "export_directory": "Unreal_Exports/Textures",
-    "optimization_completed": true
+    "metadata": {
+        "author": "Asad",
+        "tags": [
+            "castle",
+            "gate",
+            "epic"
+        ],
+        "pipeline_details": {
+            "engine_version": "5.4",
+            "build_status": "veridied"
+        }
+    }
 }
