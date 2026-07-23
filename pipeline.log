@@ -1,0 +1,212 @@
+2026-07-23 03:58:53 [INFO] ================================================================
+2026-07-23 03:58:53 [INFO] 🚀Pipeline Engine Started(Day 25 logging core)
+2026-07-23 03:58:53 [INFO] ===========================================================
+2026-07-23 03:58:53 [INFO] Scanning the file 'missing_file.json'
+2026-07-23 03:58:53 [WARNING] ⚠️Missing file: 'missing_file.json' was not found on disk.
+2026-07-23 03:58:53 [INFO] Scanning the file 'batch_json_files_genrator.py'
+2026-07-23 03:58:53 [ERROR] ❌Corrupted asset:'test_batch_json_files\batch_json_files_genrator.py' contains invalid json syntax (Expecting value: line 1 column 1 (char 0)) 
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_0.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_0.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_1.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_1.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_10.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_10.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_100.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_100.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_11.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_11.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_12.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_12.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_13.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_13.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_14.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_14.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_15.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_15.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_16.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_16.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_17.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_17.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_18.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_18.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_19.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_19.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_2.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_2.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_20.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_20.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_21.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_21.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_22.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_22.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_23.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_23.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_24.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_24.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_25.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_25.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_26.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_26.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_27.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_27.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_28.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_28.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_29.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_29.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_3.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_3.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_30.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_30.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_31.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_31.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_32.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_32.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_33.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_33.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_34.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_34.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_35.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_35.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_36.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_36.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_37.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_37.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_38.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_38.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_39.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_39.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_4.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_4.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_40.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_40.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_41.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_41.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_42.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_42.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_43.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_43.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_44.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_44.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_45.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_45.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_46.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_46.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_47.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_47.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_48.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_48.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_49.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_49.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_5.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_5.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_50.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_50.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_51.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_51.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_52.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_52.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_53.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_53.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_54.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_54.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_55.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_55.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_56.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_56.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_57.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_57.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_58.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_58.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_59.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_59.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_6.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_6.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_60.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_60.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_61.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_61.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_62.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_62.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_63.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_63.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_64.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_64.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_65.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_65.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_66.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_66.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_67.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_67.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_68.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_68.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_69.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_69.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_7.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_7.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_70.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_70.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_71.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_71.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_72.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_72.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_73.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_73.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_74.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_74.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_75.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_75.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_76.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_76.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_77.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_77.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_78.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_78.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_79.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_79.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_8.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_8.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_80.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_80.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_81.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_81.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_82.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_82.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_83.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_83.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_84.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_84.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_85.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_85.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_86.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_86.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_87.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_87.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_88.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_88.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_89.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_89.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_9.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_9.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_90.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_90.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_91.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_91.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_92.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_92.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_93.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_93.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_94.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_94.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_95.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_95.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_96.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_96.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_97.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_97.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_98.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_98.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] Scanning the file 'config_99.json'
+2026-07-23 03:58:53 [INFO] ✅Asset varified: 'config_99.json' loaded cleanly.
+2026-07-23 03:58:53 [INFO] -------------------------------------------
+2026-07-23 03:58:53 [INFO] 🏁Batch varification run completed, 102 files scanned.
+2026-07-23 03:58:53 [INFO] --------------------------------------------------
