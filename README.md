@@ -31,31 +31,28 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 23**| Reusable Saver Utilities | Building `safe_save_json` to automatically guarantee folder paths, catch write permissions, and handle serialization errors. | ✅ Done |
 | **Day 24**| Batch Processing Engine & Dataset Generator | Building automated dataset generation utilities and orchestrating multi-file asset workflows via recursive search (`rglob`). | ✅ Done |
 | **Day 25**| Dual-Channel Logging Infrastructure | Implementing standard `logging` with file/console output streams, severity classification, and ISO timestamp formatting. | ✅ Done |
-| **Day 26**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
+| **Day 26**| CLI Argument Parsing & Pipeline Auditing | Integrating `argparse` with dual-channel `logging` to execute parameter-driven batch scans and dry runs. | ✅ Done |
+| **Day 27**| *Upcoming* | *Pending* | ⏳ Idiomatic Python |
 
 ---
 
 ## 🛠️ Tech Stack & Core Modules
 * **Language:** Python 3.13+
 * **Core Modules Used:** 
+  * `argparse` (CLI flag and argument parser)
   * `pathlib` (Object-oriented filesystem paths)
   * `json` (JavaScript Object Notation encoder and decoder)
   * `logging` (Flexible event logging system for applications)
-  * `sys` (System-specific parameters and functions)
 
 ---
 
 ## 📖 Lessons Learned
 
-### Day 1 to Day 24: Batch Pipelines & File I/O
-* **Batch Operations & Safety:** Combined recursive pattern search (`rglob`), safe load/save utilities, exception boundary protections, and automated mock dataset generation[cite: 5, 6].
+### Day 1 to Day 25: Core Pipeline Foundations
+* **Batch Operations & Telemetry:** Combined recursive pattern search (`rglob`), exception handling boundaries, and dual-channel streaming logs (`FileHandler` + `StreamHandler`)[cite: 7, 8, 9].
 
-### Day 25: Industrial Logging & Severity Telemetry
-Replacing raw terminal `print()` statements with Python's built-in `logging` module elevates automation scripts into observable enterprise software[cite: 7]:
-* **Dual-Channel Broadcasting (`handlers`)**: Initializing `logging.basicConfig()` with both `FileHandler` and `StreamHandler` writes persistent execution history to disk (`pipeline.log`) while echoing live progress directly to the terminal console[cite: 7, 8].
-* **Standardized Severity Levels**:
-  * `logging.info`: Tracks standard lifecycle operations (e.g., scanning asset files, batch completion totals)[cite: 7, 8].
-  * `logging.warning`: Highlights non-fatal runtime anomalies (such as missing files on disk)[cite: 7, 8].
-  * `logging.error`: Records serious structural faults (like JSON parsing syntax failures in non-JSON assets)[cite: 7, 8].
-  * `logging.critical`: Reserves telemetry for severe system-level execution crashes[cite: 7].
-* **ISO Timestamping & Log Formatting**: Configuring `format="%(asctime)s [%(levelname)s] %(message)s"` prepends standard date/time stamps and log level markers to every log line, making pipeline audits easy to parse[cite: 7, 8].
+### Day 26: CLI-Driven Operations & Safe Dry-Run Audits
+Integrating `argparse` directly into the batch auditing engine converts hardcoded Python scripts into versatile command-line tools[cite: 7, 9]:
+* **Command-Line Interface (`argparse.ArgumentParser`)**: Configured custom terminal arguments (`--dir`, `--log-file`, `--dry-run`) allowing runtime target definitions without modifying source files[cite: 9].
+* **Boolean Simulation Flag (`action="store_true"`)**: Implemented a `--dry-run` flag that validates target paths and streams preview logs (`🔍[Dry run] Would scan...`) without triggering heavy file reading or disk writes[cite: 9, 10].
+* **Dynamic Config & Logging Sync**: User-defined arguments dynamically dictate where logs are saved on disk (`log_path`) and which target directory (`args.dir`) is recursively audited[cite: 9].
