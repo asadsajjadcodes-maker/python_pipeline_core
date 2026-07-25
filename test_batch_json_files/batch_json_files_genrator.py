@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import time
 
 def safe_save_json(data, file_path, indent=4):
 
@@ -18,12 +19,17 @@ print("--------------------")
 sample_data = {
     "asset_name": "SM_Castle_Gate_V",
     "status": "ready_for_engine",
-    "export_count": 1
+    "export_count": 1,
+    "engine": "Unreal 5.4"
 }
 print("proccessing..........")
-for i in range(101):
-    output_file =f"test_batch_json_files/config_{i}.json"
+start_time = time.time()
+for i in range(10000):
+    output_file =f"test_batch_json_files/json_10000_files/files/sample_{i}.json"
     sample_data["asset_name"] =f"SM_Castle_Gate_V{i}"
     safe_save_json(sample_data, output_file)
+end_time = round(time.time() - start_time, 4)
+print(end_time)
 print("done")
+
     
