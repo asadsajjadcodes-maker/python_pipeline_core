@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 import sys
 import argparse
-import logging
+import logging # logging module 
 
 #========================================================================================
 # Pipeline logging configuration 
