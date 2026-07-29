@@ -20,7 +20,7 @@ def main():
     
 
     logger.info(f"Scanning the folder: {args.dir}")
-    result = asset_scan(args.dir)
+    result = asset_scan(args.dir) # args.dir takes the directory entered in CLI
     if "error" in result:
         logger.error(result["error"])
     else:

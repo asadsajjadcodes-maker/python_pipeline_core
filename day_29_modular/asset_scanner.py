@@ -49,5 +49,5 @@ def asset_scan(folder_path: str) -> dict:
                 summary["other"].append(file.name)
 
 
-    return summary
+    return summary # return summary 
     
