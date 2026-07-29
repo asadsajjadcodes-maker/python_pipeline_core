@@ -34,12 +34,15 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 26**| CLI Argument Parsing & Pipeline Auditing | Integrating `argparse` with dual-channel `logging` to execute parameter-driven batch scans and dry runs. | ✅ Done |
 | **Day 27**| Scalable Batch Processing & Analytics Export | Scaling batch verification to 10,000+ files, tracking runtime metrics, and exporting analytics reports. | ✅ Done |
 | **Day 28**| Media Asset Auditing & Classification Pipeline | Scanning directories recursively, categorizing picture and video formats by extensions, and calculating total storage usage. | ✅ Done |
+| **Day 29**| Modular Media Asset Scanner & Logging Integration | Refactoring asset scanning logic into reusable modules (`asset_scanner`, `logger_config`) with CLI parameter controls. | ✅ Done |
+| **Day 30**| PySide6 GUI for Media Asset Inspection | Building a desktop interface with PySide6, implementing path input handlers, and streaming real-time status updates to a GUI display. | ✅ Done |
 
 ---
 
 ## 🛠️ Tech Stack & Core Modules
 * **Language:** Python 3.13+
 * **Core Modules Used:** 
+  * `PySide6` (Qt for Python GUI framework)
   * `argparse` (CLI flag and argument parser)
   * `pathlib` (Object-oriented filesystem paths)
   * `json` (JavaScript Object Notation encoder and decoder)
@@ -65,7 +68,19 @@ Scaling batch operations to support high-volume file processing while ensuring r
 * **High-Volume Scale Resilience**: Ensured robust error capture during batch processing up to 10,000+ items without disrupting the broader pipeline lifecycle.
 
 ### Day 28: Media Asset Auditing & Classification Pipeline
-Building an automated media auditor to scan nested workspace directories and organize multimedia assets based on format definitions[cite: 4]:
-* **Extension Set Classification**: Defined lookup sets (`IMAGE_EXTENSIONS`, `VIDEO_EXTENSIONS`) to swiftly sort media formats into specific asset categories[cite: 4].
-* **File Metadata Extraction**: Utilized `file.stat().st_size` alongside `pathlib` utilities to convert raw bytes into readable megabyte metrics (`MB`) and aggregate cumulative storage size[cite: 4].
-* **Terminal Summary Formatting**: Structured the audit pipeline to output structured counts and cumulative size calculations directly to standard output[cite: 4].
+Building an automated media auditor to scan nested workspace directories and organize multimedia assets based on format definitions:
+* **Extension Set Classification**: Defined lookup sets (`IMAGE_EXTENSIONS`, `VIDEO_EXTENSIONS`) to swiftly sort media formats into specific asset categories.
+* **File Metadata Extraction**: Utilized `file.stat().st_size` alongside `pathlib` utilities to convert raw bytes into readable megabyte metrics (`MB`) and aggregate cumulative storage size.
+* **Terminal Summary Formatting**: Structured the audit pipeline to output structured counts and cumulative size calculations directly to standard output.
+
+### Day 29: Modular Media Asset Scanner & Logging Integration
+Decoupling asset auditing logic into independent, importable Python modules for cleaner architecture and reusability[cite: 7, 9, 10]:
+* **Modular Code Structure**: Separated pipeline responsibilities across `logger_config.py`, `asset_scanner.py`, and the main CLI driver script[cite: 7, 9, 10].
+* **Centralized Pipeline Telemetry**: Configured a dedicated `PipelineLogger` instance to handle stream and file logging (`day29_run.log`) across modular execution boundaries[cite: 7, 8, 9, 10].
+* **Structured Dictionary Output**: Formatted scan outputs into a detailed dictionary tracking scanned file counts, isolated image/video lists, and cumulative storage totals[cite: 7, 10].
+
+### Day 30: PySide6 GUI for Media Asset Inspection
+Transitioning pipeline tools to a Graphical User Interface using PySide6 widgets and layout managers:
+* **Window & Layout Hierarchy**: Configured `QMainWindow` with central widgets, `QVBoxLayout`, and `QHBoxLayout` to arrange headers, input controls, and output areas cleanly.
+* **Signal-Slot Event Connection**: Linked button click events (`clicked.connect`) to custom event handler functions (`handle_inspect_click`) for real-time user interaction.
+* **Interactive Output Console**: Utilized read-only `QTextEdit` widgets as live visual consoles to stream inspection status, warnings, and system logs to the user interface.
