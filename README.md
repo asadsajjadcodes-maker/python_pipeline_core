@@ -36,6 +36,7 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 28**| Media Asset Auditing & Classification Pipeline | Scanning directories recursively, categorizing picture and video formats by extensions, and calculating total storage usage. | ✅ Done |
 | **Day 29**| Modular Media Asset Scanner & Logging Integration | Refactoring asset scanning logic into reusable modules (`asset_scanner`, `logger_config`) with CLI parameter controls. | ✅ Done |
 | **Day 30**| PySide6 GUI for Media Asset Inspection | Building a desktop interface with PySide6, implementing path input handlers, and streaming real-time status updates to a GUI display. | ✅ Done |
+| **Day 31**| Multi-Action Desktop GUI & Directory Dialogs | Expanding PySide6 window controls with OS native folder dialogs (`QFileDialog`) and audit execution triggers. | ✅ Done |
 
 ---
 
@@ -74,13 +75,19 @@ Building an automated media auditor to scan nested workspace directories and org
 * **Terminal Summary Formatting**: Structured the audit pipeline to output structured counts and cumulative size calculations directly to standard output.
 
 ### Day 29: Modular Media Asset Scanner & Logging Integration
-Decoupling asset auditing logic into independent, importable Python modules for cleaner architecture and reusability[cite: 7, 9, 10]:
-* **Modular Code Structure**: Separated pipeline responsibilities across `logger_config.py`, `asset_scanner.py`, and the main CLI driver script[cite: 7, 9, 10].
-* **Centralized Pipeline Telemetry**: Configured a dedicated `PipelineLogger` instance to handle stream and file logging (`day29_run.log`) across modular execution boundaries[cite: 7, 8, 9, 10].
-* **Structured Dictionary Output**: Formatted scan outputs into a detailed dictionary tracking scanned file counts, isolated image/video lists, and cumulative storage totals[cite: 7, 10].
+Decoupling asset auditing logic into independent, importable Python modules for cleaner architecture and reusability:
+* **Modular Code Structure**: Separated pipeline responsibilities across `logger_config.py`, `asset_scanner.py`, and the main CLI driver script.
+* **Centralized Pipeline Telemetry**: Configured a dedicated `PipelineLogger` instance to handle stream and file logging (`day29_run.log`) across modular execution boundaries.
+* **Structured Dictionary Output**: Formatted scan outputs into a detailed dictionary tracking scanned file counts, isolated image/video lists, and cumulative storage totals.
 
 ### Day 30: PySide6 GUI for Media Asset Inspection
 Transitioning pipeline tools to a Graphical User Interface using PySide6 widgets and layout managers:
 * **Window & Layout Hierarchy**: Configured `QMainWindow` with central widgets, `QVBoxLayout`, and `QHBoxLayout` to arrange headers, input controls, and output areas cleanly.
 * **Signal-Slot Event Connection**: Linked button click events (`clicked.connect`) to custom event handler functions (`handle_inspect_click`) for real-time user interaction.
 * **Interactive Output Console**: Utilized read-only `QTextEdit` widgets as live visual consoles to stream inspection status, warnings, and system logs to the user interface.
+
+### Day 31: Multi-Action Desktop GUI & Directory Dialogs
+Extending the PySide6 Media Asset Manager with dynamic file dialogs and action handlers[cite: 11]:
+* **Native OS Directory Picker (`QFileDialog`)**: Integrated `QFileDialog.getExistingDirectory` to allow users to interactively pick target workspace folders directly[cite: 11].
+* **Multi-Action Command Triggers**: Wired distinct push buttons (`Browse Directory`, `Run Audit`, `Run Manager`) to dedicated event handler methods (`folder_dialog`, `run_Audit`, `run_manager`)[cite: 11].
+* **Real-time Console Feedback**: Implemented defensive input checks in `run_Audit` and `run_manager` to alert users when no directory is selected before executing actions[cite: 11].
