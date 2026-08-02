@@ -37,13 +37,14 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 29**| Modular Media Asset Scanner & Logging Integration | Refactoring asset scanning logic into reusable modules (`asset_scanner`, `logger_config`) with CLI parameter controls. | ✅ Done |
 | **Day 30**| PySide6 GUI for Media Asset Inspection | Building a desktop interface with PySide6, implementing path input handlers, and streaming real-time status updates to a GUI display. | ✅ Done |
 | **Day 31**| Multi-Action Desktop GUI & Directory Dialogs | Expanding PySide6 window controls with OS native folder dialogs (`QFileDialog`) and audit execution triggers. | ✅ Done |
+| **Day 32**| Modern QSS Styling & Visual Feedback Interface | Redesigning the Media Asset Manager with modern Qt stylesheets (QSS), dark terminal logs, rounded input controls, and progress indicators. | ✅ Done |
 
 ---
 
 ## 🛠️ Tech Stack & Core Modules
 * **Language:** Python 3.13+
 * **Core Modules Used:** 
-  * `PySide6` (Qt for Python GUI framework)
+  * `PySide6` (Qt for Python GUI framework with custom QSS styling)
   * `argparse` (CLI flag and argument parser)
   * `pathlib` (Object-oriented filesystem paths)
   * `json` (JavaScript Object Notation encoder and decoder)
@@ -91,3 +92,9 @@ Extending the PySide6 Media Asset Manager with dynamic file dialogs and action h
 * **Native OS Directory Picker (`QFileDialog`)**: Integrated `QFileDialog.getExistingDirectory` to allow users to interactively pick target workspace folders directly[cite: 11].
 * **Multi-Action Command Triggers**: Wired distinct push buttons (`Browse Directory`, `Run Audit`, `Run Manager`) to dedicated event handler methods (`folder_dialog`, `run_Audit`, `run_manager`)[cite: 11].
 * **Real-time Console Feedback**: Implemented defensive input checks in `run_Audit` and `run_manager` to alert users when no directory is selected before executing actions[cite: 11].
+
+### Day 32: Modern QSS Styling & Visual Feedback Interface
+Overhauling the desktop GUI design using Qt Stylesheets (QSS) and visual task indicators:
+* **Custom UI Aesthetics**: Applied modern CSS/QSS styling to customize buttons, header typography ("⚡ Pro Media Asset Manager"), input path bars, and container margins.
+* **Dark Console & Log Indicators**: Styled the read-only console area with a dark terminal background (`#181623`) and color-coded status icons (⚠️ warnings, 🚀 operations, ✅ completion status).
+* **Progress Bar Integration**: Added a stylized execution progress bar to provide real-time visual completion percentages during background audit and organization processes.

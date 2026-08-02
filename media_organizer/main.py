@@ -53,10 +53,13 @@ class MainWindow(QMainWindow):
         self.auto_arrange_button.clicked.connect(self.run_manager)
         input_layout.addWidget(self.auto_arrange_button)
 
-        # screen to show output
+        # out put screen
         self.display_screen = QTextEdit()
         self.display_screen.setReadOnly(True) # makes the output read only
         main_layout.addWidget(self.display_screen)
+
+        
+        
 
 
 
@@ -81,6 +84,8 @@ class MainWindow(QMainWindow):
             self.display_screen.append("⚠️ Warning: No folder selected! Click 'Browse...' first .")
         else:
             self.display_screen.append(f"🚀 Starting audit on: '{folder}'")
+        
+
     def run_manager(self):
         folder = self.path_box.text()
 
