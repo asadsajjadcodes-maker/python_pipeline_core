@@ -1,4 +1,5 @@
 import sys
+import time
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow, 
@@ -9,95 +10,155 @@ from PySide6.QtWidgets import (
     QPushButton, 
     QLineEdit, 
     QTextEdit, 
-    QFileDialog # allows to open window picker.
+    QFileDialog,
+    QProgressBar
 )
+
+# ==============================================================================
+# 1. THE DARK MODE PAINT JOB (QSS)
+# ==============================================================================
+DARK_THEME = """
+QMainWindow {
+    background-color: #1E1E2E;
+}
+QLabel {
+    color: #CDD6F4;
+    font-weight: bold;
+}
+QLineEdit {
+    background-color: #313244;
+    color: #F5E0DC;
+    border: 1px solid #45475A;
+    border-radius: 5px;
+    padding: 6px;
+}
+QPushButton {
+    background-color: #89B4FA;
+    color: #11111B;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #B4BEFE;
+}
+QTextEdit {
+    background-color: #11111B;
+    color: #A6E3A1;
+    border: 1px solid #45475A;
+    border-radius: 5px;
+    font-family: Consolas, monospace;
+}
+QProgressBar {
+    border: 1px solid #45475A;
+    border-radius: 5px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #313244;
+    font-weight: bold;
+}
+QProgressBar::chunk {
+    background-color: #89B4FA;
+    border-radius: 4px;
+}
+"""
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("📷Media Asset Manager.    email: asad.sajjad.codes@gmail.com") # tital of the tool 
-        self.resize(650, 420)  # size for the window 
+        self.setWindowTitle("📷 Media Asset Manager | asad.sajjad.codes@gmail.com") 
+        self.resize(700, 480)  
 
-        # Main canvas setup 
+        # Main canvas layout
         main_canvas = QWidget()
         self.setCentralWidget(main_canvas)
 
-        # main layout (vertical top to bottom)
         main_layout = QVBoxLayout()
         main_canvas.setLayout(main_layout)
 
-        # title label
-        self.title_label = QLabel("Media Asset Manager")
-        self.title_label.setStyleSheet("font-size: 24px; font-weight: bold; color: #333;") # style for the title label
+        # Title Header
+        self.title_label = QLabel("⚡ Pro Media Asset Manager")
+        self.title_label.setStyleSheet("font-size: 22px; color: #89B4FA;")
         main_layout.addWidget(self.title_label)
 
-        # input row (horizontal)
+        # Folder Input Row
         input_layout = QHBoxLayout()
-        main_layout.addLayout(input_layout) # add input layout inside the main layout
+        main_layout.addLayout(input_layout)
         
-        self.path_box = QLineEdit() # add a text input box 
-        self.path_box.setPlaceholderText("Click 'Browse...' to select the folder.")
+        self.path_box = QLineEdit() 
+        self.path_box.setPlaceholderText("Click 'Browse Directory' to pick a folder...")
         input_layout.addWidget(self.path_box)
 
-        # adding buttons 
-        # browse button
         self.browse_button = QPushButton("Browse Directory")
         self.browse_button.clicked.connect(self.folder_dialog)
         input_layout.addWidget(self.browse_button)
-        # inspect button
+
+        # Action Buttons Row
+        button_layout = QHBoxLayout()
+        main_layout.addLayout(button_layout)
+
         self.inspect_button = QPushButton("Run Audit")
-        self.inspect_button.clicked.connect(self.run_Audit)
-        input_layout.addWidget(self.inspect_button)
-        # auto arrange button
+        self.inspect_button.clicked.connect(self.run_audit)
+        button_layout.addWidget(self.inspect_button)
+
         self.auto_arrange_button = QPushButton("Run Manager")
         self.auto_arrange_button.clicked.connect(self.run_manager)
-        input_layout.addWidget(self.auto_arrange_button)
+        button_layout.addWidget(self.auto_arrange_button)
 
-        # out put screen
+        # Live Progress Bar
+        self.progress_bar = QProgressBar()
+        self.progress_bar.setValue(0)
+        main_layout.addWidget(self.progress_bar)
+
+        # Output Log Screen
         self.display_screen = QTextEdit()
-        self.display_screen.setReadOnly(True) # makes the output read only
+        self.display_screen.setReadOnly(True)
         main_layout.addWidget(self.display_screen)
 
-        
-        
-
-
-
-
-
     def folder_dialog(self):
-        selected_folder = QFileDialog.getExistingDirectory( # opens the standard OS folder
-            self,
-            "Select Asset Directory",
-            "" # starts at default directory
-        )
-        # if the user selected a folder 
+        selected_folder = QFileDialog.getExistingDirectory(self, "Select Asset Directory", "")
         if selected_folder:
-            self.path_box.setText(selected_folder) # write the selected path in path box 
-            self.display_screen.append(f"📁Folder selected: '{selected_folder}'")
+            self.path_box.setText(selected_folder)
+            self.display_screen.append(f"📁 Folder selected: '{selected_folder}'")
 
-        
-    def run_Audit(self):
-        folder = self.path_box.text()
-
+    def run_audit(self):
+        folder = self.path_box.text().strip()
         if not folder:
-            self.display_screen.append("⚠️ Warning: No folder selected! Click 'Browse...' first .")
-        else:
-            self.display_screen.append(f"🚀 Starting audit on: '{folder}'")
+            self.display_screen.append("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
+            return
+
+        self.display_screen.append(f"🔍 Starting audit on: '{folder}'...")
+        self.progress_bar.setValue(0)
         
+        for percent in range(1, 101, 20):
+            time.sleep(0.08)
+            self.progress_bar.setValue(percent)
+            QApplication.processEvents()  # Keeps the window responsive
+
+        self.progress_bar.setValue(100)
+        self.display_screen.append("✅ Audit simulation complete!")
 
     def run_manager(self):
-        folder = self.path_box.text()
-
+        folder = self.path_box.text().strip()
         if not folder:
-            self.display_screen.append("⚠️ Warning: No folder selected! Click 'Browse...' first .")
-        else:
-            self.display_screen.append(f"🚀 Starting auto organizing on: '{folder}'")
+            self.display_screen.append("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
+            return
+
+        self.display_screen.append(f"🚀 Starting auto organizing on: '{folder}'...")
+        self.progress_bar.setValue(0)
         
-    
+        for percent in range(1, 101, 25):
+            time.sleep(0.08)
+            self.progress_bar.setValue(percent)
+            QApplication.processEvents()
+
+        self.progress_bar.setValue(100)
+        self.display_screen.append("✅ Auto organizing simulation complete!")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    app.setStyleSheet(DARK_THEME)  # Apply global styling
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
