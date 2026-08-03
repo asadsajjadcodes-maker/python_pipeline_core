@@ -13,6 +13,7 @@ from PySide6.QtWidgets import (
     QFileDialog,
     QProgressBar
 )
+from scanner import path_test
 
 # ==============================================================================
 # 1. THE DARK MODE PAINT JOB (QSS)
@@ -129,16 +130,33 @@ class MainWindow(QMainWindow):
             return
 
         self.display_screen.append(f"🔍 Starting audit on: '{folder}'...")
-        self.progress_bar.setValue(0)
-        
-        for percent in range(1, 101, 20):
-            time.sleep(0.08)
-            self.progress_bar.setValue(percent)
-            QApplication.processEvents()  # Keeps the window responsive
+        self.progress_bar.setValue(0) # Reset progress bar
 
-        self.progress_bar.setValue(100)
-        self.display_screen.append("✅ Audit simulation complete!")
+        data = path_test(folder)
 
+        # If path_test returned an error message string instead of a list
+        if isinstance(data, str):
+            self.display_screen.append(data)
+            return
+
+        total_files = len(data)
+        if total_files == 0:
+            self.progress_bar.setValue(100)
+            return
+
+        # Loop through files and dynamically update progress
+        for index, file in enumerate(data, start=1):
+            self.display_screen.append(file)
+
+            # Calculate completion percentage
+            progress = int((index / total_files) * 100)
+            self.progress_bar.setValue(progress)
+
+            # Force PySide to refresh the UI screen live
+            QApplication.processEvents()
+
+        self.display_screen.append("✅ Audit complete!")
+            
     def run_manager(self):
         folder = self.path_box.text().strip()
         if not folder:

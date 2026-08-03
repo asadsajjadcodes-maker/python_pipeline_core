@@ -38,6 +38,7 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 30**| PySide6 GUI for Media Asset Inspection | Building a desktop interface with PySide6, implementing path input handlers, and streaming real-time status updates to a GUI display. | ✅ Done |
 | **Day 31**| Multi-Action Desktop GUI & Directory Dialogs | Expanding PySide6 window controls with OS native folder dialogs (`QFileDialog`) and audit execution triggers. | ✅ Done |
 | **Day 32**| Modern QSS Styling & Visual Feedback Interface | Redesigning the Media Asset Manager with modern Qt stylesheets (QSS), dark terminal logs, rounded input controls, and progress indicators. | ✅ Done |
+| **Day 33**| Live Backend-GUI Integration & Dynamic Progress | Connecting `pathlib` recursive scanner logic (`scanner.py`) to the PySide6 UI with real-time progress bar tracking and live event processing. | ✅ Done |
 
 ---
 
@@ -95,6 +96,12 @@ Extending the PySide6 Media Asset Manager with dynamic file dialogs and action h
 
 ### Day 32: Modern QSS Styling & Visual Feedback Interface
 Overhauling the desktop GUI design using Qt Stylesheets (QSS) and visual task indicators:
-* **Custom UI Aesthetics**: Applied modern CSS/QSS styling to customize buttons, header typography ("⚡ Pro Media Asset Manager"), input path bars, and container margins.
-* **Dark Console & Log Indicators**: Styled the read-only console area with a dark terminal background (`#181623`) and color-coded status icons (⚠️ warnings, 🚀 operations, ✅ completion status).
-* **Progress Bar Integration**: Added a stylized execution progress bar to provide real-time visual completion percentages during background audit and organization processes.
+* **Custom UI Aesthetics**: Applied modern CSS/QSS styling to customize buttons, header typography ("⚡ Pro Media Asset Manager"), input path bars, and container margins[cite: 14].
+* **Dark Console & Log Indicators**: Styled the read-only console area with a dark terminal background (`#11111B`) and color-coded status icons (⚠️ warnings, 🚀 operations, ✅ completion status)[cite: 14].
+* **Progress Bar Integration**: Added a stylized execution progress bar to provide real-time visual completion percentages during background audit and organization processes[cite: 14].
+
+### Day 33: Live Backend-GUI Integration & Dynamic Progress
+Linking backend `pathlib` file scanner functions directly to the PySide6 desktop interface[cite: 14, 15]:
+* **Modular Backend Integration**: Connected `scanner.py` (`path_test`) into the main window driver (`main.py`) to execute live recursive asset scans (`rglob("*")`) on disk[cite: 14, 15].
+* **Dynamic Progress Percentage Calculations**: Iterated through scanned asset lists, calculating execution progress as `int((index / total_files) * 100)` to update `QProgressBar` in real time[cite: 14].
+* **Live GUI Frame Refreshing**: Integrated `QApplication.processEvents()` inside iteration loops to force PySide to render live console text and progress updates without freezing the interface[cite: 14].
