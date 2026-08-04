@@ -14,6 +14,7 @@ from PySide6.QtWidgets import (
     QProgressBar
 )
 from scanner import path_test
+from logger import log_info, log_warning, log_error
 
 # ==============================================================================
 # 1. THE DARK MODE PAINT JOB (QSS)
@@ -122,7 +123,7 @@ class MainWindow(QMainWindow):
     # Centralized GUI messaging helper.
     # All user-facing messages pass through this method,
     # making future logging integration much easier.
-    # making the show mwssage function to use it easyly
+    
     def show_message(self, message: str) -> None: # takes a string and returns None
         self.display_screen.append(message)
         
@@ -133,14 +134,17 @@ class MainWindow(QMainWindow):
         if selected_folder:
             self.path_box.setText(selected_folder)
             self.show_message(f"📁 Folder selected: '{selected_folder}'")
+            log_info(f"📁 Folder selected: '{selected_folder}'")
 
     def run_audit(self):
         folder = self.path_box.text().strip()
         if not folder:
             self.show_message("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
+            log_warning("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
             return
 
         self.show_message(f"🔍 Starting audit on: '{folder}'...")
+        log_info(f"🔍 Starting audit on: '{folder}'...")
         self.progress_bar.setValue(0) # Reset progress bar
 
         data = path_test(folder)
@@ -167,14 +171,17 @@ class MainWindow(QMainWindow):
             QApplication.processEvents()
 
         self.show_message("✅ Audit complete!")
+        log_info("✅ Audit complete!")
             
     def run_manager(self):
         folder = self.path_box.text().strip()
         if not folder:
             self.show_message("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
+            log_warning("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
             return
 
         self.show_message(f"🚀 Starting auto organizing on: '{folder}'...")
+        log_info(f"🚀 Starting auto organizing on: '{folder}'...")
         self.progress_bar.setValue(0)
         
         for percent in range(1, 101, 25):
@@ -184,6 +191,7 @@ class MainWindow(QMainWindow):
 
         self.progress_bar.setValue(100)
         self.show_message("✅ Auto organizing simulation complete!")
+        log_info("✅ Auto organizing simulation complete!")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

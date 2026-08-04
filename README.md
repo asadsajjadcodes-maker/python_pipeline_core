@@ -39,7 +39,8 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 31**| Multi-Action Desktop GUI & Directory Dialogs | Expanding PySide6 window controls with OS native folder dialogs (`QFileDialog`) and audit execution triggers. | ✅ Done |
 | **Day 32**| Modern QSS Styling & Visual Feedback Interface | Redesigning the Media Asset Manager with modern Qt stylesheets (QSS), dark terminal logs, rounded input controls, and progress indicators. | ✅ Done |
 | **Day 33**| Live Backend-GUI Integration & Dynamic Progress | Connecting `pathlib` recursive scanner logic (`scanner.py`) to the PySide6 UI with real-time progress bar tracking and live event processing. | ✅ Done |
-| Day 34 | UI Message Abstraction & Logging Preparation | Centralized GUI message handling with a reusable show_message() helper, reducing duplicated UI update logic and preparing the application for a modular logging system. | ✅ Done |
+| **Day 34**| UI Message Abstraction & Logging Preparation | Centralized GUI message handling with a reusable `show_message()` helper, reducing duplicated UI update logic. | ✅ Done |
+| **Lesson 35**| Integrated Multi-Module Logging Engine | Implementing a dedicated logging module (`logger.py`) with severity levels (`INFO`, `WARNING`, `ERROR`) integrated across backend and GUI layers. | ✅ Done |
 
 ---
 
@@ -97,21 +98,24 @@ Extending the PySide6 Media Asset Manager with dynamic file dialogs and action h
 
 ### Day 32: Modern QSS Styling & Visual Feedback Interface
 Overhauling the desktop GUI design using Qt Stylesheets (QSS) and visual task indicators:
-* **Custom UI Aesthetics**: Applied modern CSS/QSS styling to customize buttons, header typography ("⚡ Pro Media Asset Manager"), input path bars, and container margins[cite: 14].
-* **Dark Console & Log Indicators**: Styled the read-only console area with a dark terminal background (`#11111B`) and color-coded status icons (⚠️ warnings, 🚀 operations, ✅ completion status)[cite: 14].
-* **Progress Bar Integration**: Added a stylized execution progress bar to provide real-time visual completion percentages during background audit and organization processes[cite: 14].
+* **Custom UI Aesthetics**: Applied modern CSS/QSS styling to customize buttons, header typography ("⚡ Pro Media Asset Manager"), input path bars, and container margins[cite: 14, 18].
+* **Dark Console & Log Indicators**: Styled the read-only console area with a dark terminal background (`#11111B`) and color-coded status icons (⚠️ warnings, 🚀 operations, ✅ completion status)[cite: 14, 18].
+* **Progress Bar Integration**: Added a stylized execution progress bar to provide real-time visual completion percentages during background audit and organization processes[cite: 14, 18].
 
 ### Day 33: Live Backend-GUI Integration & Dynamic Progress
 Linking backend `pathlib` file scanner functions directly to the PySide6 desktop interface[cite: 14, 15]:
-* **Modular Backend Integration**: Connected `scanner.py` (`path_test`) into the main window driver (`main.py`) to execute live recursive asset scans (`rglob("*")`) on disk[cite: 14, 15].
-* **Dynamic Progress Percentage Calculations**: Iterated through scanned asset lists, calculating execution progress as `int((index / total_files) * 100)` to update `QProgressBar` in real time[cite: 14].
-* **Live GUI Frame Refreshing**: Integrated `QApplication.processEvents()` inside iteration loops to force PySide to render live console text and progress updates without freezing the interface[cite: 14].
+* **Modular Backend Integration**: Connected `scanner.py` (`path_test`) into the main window driver (`main.py`) to execute live recursive asset scans (`rglob("*")`) on disk[cite: 14, 15, 18, 19].
+* **Dynamic Progress Percentage Calculations**: Iterated through scanned asset lists, calculating execution progress as `int((index / total_files) * 100)` to update `QProgressBar` in real time[cite: 14, 18].
+* **Live GUI Frame Refreshing**: Integrated `QApplication.processEvents()` inside iteration loops to force PySide to render live console text and progress updates without freezing the interface[cite: 14, 18].
 
 ### Day 34: UI Message Abstraction & Logging Preparation
+Preparing the Media Asset Manager for a professional logging system by separating user interface messaging from backend operations[cite: 20]:
+* **Centralized GUI Messaging**: Introduced a dedicated `show_message()` helper inside `MainWindow` to encapsulate all `QTextEdit` updates[cite: 18, 20].
+* **Reduced Code Duplication**: Standardized message routing to streamline user interface updates and simplify logging integration[cite: 20].
+* **Separation of Concerns**: Isolated UI component operations from core processing logic to build a maintainable application architecture[cite: 20].
 
-* Preparing the Media Asset Manager for a professional logging system by separating user interface messaging from future application logging responsibilities.
-
-* Centralized GUI Messaging: Introduced a dedicated show_message() helper inside MainWindow to encapsulate all QTextEdit updates, creating a single entry point for user-facing messages.
-* Reduced Code Duplication: Replaced every direct display_screen.append() call with show_message(), making the interface easier to maintain and reducing repetitive GUI code.
-* Foundation for Logging Architecture: Established an abstraction layer that will allow future integration of a dedicated logger.py module capable of forwarding messages to the GUI, terminal, and rotating log files without changing the rest of the application.
-* Improved Separation of Responsibilities: Reinforced the distinction between user interface messages and application logging while keeping backend scanning logic independent of PySide6.
+### Lesson 35: Integrated Multi-Module Logging Engine
+Integrating Python's standard `logging` library across the backend scanner and PySide6 application layers[cite: 17, 18, 19]:
+* **Dedicated Logging Module (`logger.py`)**: Designed a centralized logging utility configuring `basicConfig` with ISO-formatted timestamps, and helper functions (`log_info`, `log_warning`, `log_error`)[cite: 17].
+* **Backend File Telemetry**: Integrated logging statements directly into `scanner.py` (`path_test`) to log detected files, missing paths, and execution errors automatically during recursive directory scans[cite: 19].
+* **Dual GUI & System Telemetry**: Synchronized user-facing UI updates (`show_message()`) with systemic application logging inside `main.py` across all main window actions[cite: 18].
