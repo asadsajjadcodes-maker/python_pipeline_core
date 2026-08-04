@@ -117,26 +117,37 @@ class MainWindow(QMainWindow):
         self.display_screen.setReadOnly(True)
         main_layout.addWidget(self.display_screen)
 
+
+
+    # Centralized GUI messaging helper.
+    # All user-facing messages pass through this method,
+    # making future logging integration much easier.
+    # making the show mwssage function to use it easyly
+    def show_message(self, message: str) -> None: # takes a string and returns None
+        self.display_screen.append(message)
+        
+
+
     def folder_dialog(self):
         selected_folder = QFileDialog.getExistingDirectory(self, "Select Asset Directory", "")
         if selected_folder:
             self.path_box.setText(selected_folder)
-            self.display_screen.append(f"📁 Folder selected: '{selected_folder}'")
+            self.show_message(f"📁 Folder selected: '{selected_folder}'")
 
     def run_audit(self):
         folder = self.path_box.text().strip()
         if not folder:
-            self.display_screen.append("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
+            self.show_message("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
             return
 
-        self.display_screen.append(f"🔍 Starting audit on: '{folder}'...")
+        self.show_message(f"🔍 Starting audit on: '{folder}'...")
         self.progress_bar.setValue(0) # Reset progress bar
 
         data = path_test(folder)
 
         # If path_test returned an error message string instead of a list
         if isinstance(data, str):
-            self.display_screen.append(data)
+            self.show_message(data)
             return
 
         total_files = len(data)
@@ -146,7 +157,7 @@ class MainWindow(QMainWindow):
 
         # Loop through files and dynamically update progress
         for index, file in enumerate(data, start=1):
-            self.display_screen.append(file)
+            self.show_message(file)
 
             # Calculate completion percentage
             progress = int((index / total_files) * 100)
@@ -155,15 +166,15 @@ class MainWindow(QMainWindow):
             # Force PySide to refresh the UI screen live
             QApplication.processEvents()
 
-        self.display_screen.append("✅ Audit complete!")
+        self.show_message("✅ Audit complete!")
             
     def run_manager(self):
         folder = self.path_box.text().strip()
         if not folder:
-            self.display_screen.append("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
+            self.show_message("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
             return
 
-        self.display_screen.append(f"🚀 Starting auto organizing on: '{folder}'...")
+        self.show_message(f"🚀 Starting auto organizing on: '{folder}'...")
         self.progress_bar.setValue(0)
         
         for percent in range(1, 101, 25):
@@ -172,7 +183,7 @@ class MainWindow(QMainWindow):
             QApplication.processEvents()
 
         self.progress_bar.setValue(100)
-        self.display_screen.append("✅ Auto organizing simulation complete!")
+        self.show_message("✅ Auto organizing simulation complete!")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -39,6 +39,7 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 31**| Multi-Action Desktop GUI & Directory Dialogs | Expanding PySide6 window controls with OS native folder dialogs (`QFileDialog`) and audit execution triggers. | ✅ Done |
 | **Day 32**| Modern QSS Styling & Visual Feedback Interface | Redesigning the Media Asset Manager with modern Qt stylesheets (QSS), dark terminal logs, rounded input controls, and progress indicators. | ✅ Done |
 | **Day 33**| Live Backend-GUI Integration & Dynamic Progress | Connecting `pathlib` recursive scanner logic (`scanner.py`) to the PySide6 UI with real-time progress bar tracking and live event processing. | ✅ Done |
+| Day 34 | UI Message Abstraction & Logging Preparation | Centralized GUI message handling with a reusable show_message() helper, reducing duplicated UI update logic and preparing the application for a modular logging system. | ✅ Done |
 
 ---
 
@@ -105,3 +106,12 @@ Linking backend `pathlib` file scanner functions directly to the PySide6 desktop
 * **Modular Backend Integration**: Connected `scanner.py` (`path_test`) into the main window driver (`main.py`) to execute live recursive asset scans (`rglob("*")`) on disk[cite: 14, 15].
 * **Dynamic Progress Percentage Calculations**: Iterated through scanned asset lists, calculating execution progress as `int((index / total_files) * 100)` to update `QProgressBar` in real time[cite: 14].
 * **Live GUI Frame Refreshing**: Integrated `QApplication.processEvents()` inside iteration loops to force PySide to render live console text and progress updates without freezing the interface[cite: 14].
+
+### Day 34: UI Message Abstraction & Logging Preparation
+
+* Preparing the Media Asset Manager for a professional logging system by separating user interface messaging from future application logging responsibilities.
+
+* Centralized GUI Messaging: Introduced a dedicated show_message() helper inside MainWindow to encapsulate all QTextEdit updates, creating a single entry point for user-facing messages.
+* Reduced Code Duplication: Replaced every direct display_screen.append() call with show_message(), making the interface easier to maintain and reducing repetitive GUI code.
+* Foundation for Logging Architecture: Established an abstraction layer that will allow future integration of a dedicated logger.py module capable of forwarding messages to the GUI, terminal, and rotating log files without changing the rest of the application.
+* Improved Separation of Responsibilities: Reinforced the distinction between user interface messages and application logging while keeping backend scanning logic independent of PySide6.
