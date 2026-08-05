@@ -1,12 +1,29 @@
 import logging
-# setup logging 
-logging.basicConfig(
-    level= logging.INFO,
-    format= "%(asctime)s [%(levelname)s] [%(name)s] %(message)s",
+
+# Create the logger 
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+#  Create the StreamHandler 
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+
+# Create the formate for log message
+log_formate = logging.Formatter(
+    fmt="%(asctime)s [%(levelname)s] [%(name)s] %(message)s",
     datefmt= "%Y-%m-%d %H:%M:%S"
 )
-# gives logging a nick name 
-logger = logging.getLogger(__name__)
+
+# Attach the log formate to the handler  
+console_handler.setFormatter(log_formate)
+
+# Attach the handler to the logger 
+logger.addHandler(console_handler)
+
+
+
+
+
 # for info output 
 def log_info(message : str) -> None:
     logger.info(message)

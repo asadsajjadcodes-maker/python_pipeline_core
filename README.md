@@ -41,6 +41,7 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 33**| Live Backend-GUI Integration & Dynamic Progress | Connecting `pathlib` recursive scanner logic (`scanner.py`) to the PySide6 UI with real-time progress bar tracking and live event processing. | ✅ Done |
 | **Day 34**| UI Message Abstraction & Logging Preparation | Centralized GUI message handling with a reusable `show_message()` helper, reducing duplicated UI update logic. | ✅ Done |
 | **Lesson 35**| Integrated Multi-Module Logging Engine | Implementing a dedicated logging module (`logger.py`) with severity levels (`INFO`, `WARNING`, `ERROR`) integrated across backend and GUI layers. | ✅ Done |
+| **Lesson 36** | Logging Architecture & StreamHandler | Replaced `logging.basicConfig()` with an explicit `StreamHandler`, configured the logger manually, introduced logger-to-handler architecture, and gained a deeper understanding of how log records flow from the application to their output destinations. | ✅ Done |
 
 ---
 
@@ -119,3 +120,15 @@ Integrating Python's standard `logging` library across the backend scanner and P
 * **Dedicated Logging Module (`logger.py`)**: Designed a centralized logging utility configuring `basicConfig` with ISO-formatted timestamps, and helper functions (`log_info`, `log_warning`, `log_error`)[cite: 17].
 * **Backend File Telemetry**: Integrated logging statements directly into `scanner.py` (`path_test`) to log detected files, missing paths, and execution errors automatically during recursive directory scans[cite: 19].
 * **Dual GUI & System Telemetry**: Synchronized user-facing UI updates (`show_message()`) with systemic application logging inside `main.py` across all main window actions[cite: 18].
+
+### lesson 36: Logging Architecture & StreamHandler
+
+Moving beyond `logging.basicConfig()` to understand the internal architecture of Python's logging framework.
+
+* **Manual Logger Configuration:** Replaced `logging.basicConfig()` with an explicitly configured `StreamHandler`, providing greater control over how log messages are processed.
+* **Understanding Logging Architecture:** Learned the relationship between the application, logger, handlers, formatter, and final output destination, forming the foundation of Python's logging system.
+* **Logger Responsibilities:** Understood that the logger receives log messages, creates a `LogRecord`, and forwards it to every attached handler instead of writing output directly.
+* **StreamHandler:** Configured a dedicated `StreamHandler` responsible for sending log messages to the terminal while keeping the logger independent of the output destination.
+* **Formatter Integration:** Applied a custom `Formatter` to the handler, learning that formatting belongs to handlers rather than the logger itself.
+* **Professional Logging Design:** Explored how multiple handlers allow a single log message to be delivered to multiple destinations (such as the terminal, log files, and future GUI logging) without changing application code.
+* **Preparation for Multiple Destinations:** Established the architectural foundation required for upcoming lessons covering `FileHandler`, rotating log files, custom GUI handlers, and thread-safe logging with Qt signals.
