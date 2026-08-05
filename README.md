@@ -42,6 +42,7 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Day 34**| UI Message Abstraction & Logging Preparation | Centralized GUI message handling with a reusable `show_message()` helper, reducing duplicated UI update logic. | ✅ Done |
 | **Lesson 35**| Integrated Multi-Module Logging Engine | Implementing a dedicated logging module (`logger.py`) with severity levels (`INFO`, `WARNING`, `ERROR`) integrated across backend and GUI layers. | ✅ Done |
 | **Lesson 36** | Logging Architecture & StreamHandler | Replaced `logging.basicConfig()` with an explicit `StreamHandler`, configured the logger manually, introduced logger-to-handler architecture, and gained a deeper understanding of how log records flow from the application to their output destinations. | ✅ Done |
+| **Lesson 37** | Multi-Destination Logging with FileHandler | Extended the logging system by adding a `FileHandler`, allowing a single log message to be written to both the terminal and `app.log`. Reused the same formatter across multiple handlers and implemented duplicate-handler prevention using `if not logger.handlers:` to avoid repeated log entries. | ✅ Done |
 
 ---
 
@@ -132,3 +133,14 @@ Moving beyond `logging.basicConfig()` to understand the internal architecture of
 * **Formatter Integration:** Applied a custom `Formatter` to the handler, learning that formatting belongs to handlers rather than the logger itself.
 * **Professional Logging Design:** Explored how multiple handlers allow a single log message to be delivered to multiple destinations (such as the terminal, log files, and future GUI logging) without changing application code.
 * **Preparation for Multiple Destinations:** Established the architectural foundation required for upcoming lessons covering `FileHandler`, rotating log files, custom GUI handlers, and thread-safe logging with Qt signals.
+
+### Lesson 37: Multi-Destination Logging with FileHandler
+
+Expanding the logging system from a single output destination to a reusable multi-handler architecture.
+
+* **FileHandler Integration:** Added a dedicated `FileHandler` to automatically write application logs to `app.log` while preserving terminal output.
+* **Multiple Handlers:** Learned that a single `LogRecord` can be processed by multiple handlers, allowing one logging call to send the same message to several destinations.
+* **Shared Formatter:** Reused a single `Formatter` instance for both the `StreamHandler` and `FileHandler`, ensuring consistent log formatting across all outputs.
+* **Duplicate Handler Prevention:** Introduced `if not logger.handlers:` to prevent duplicate handlers from being attached when the logging module is imported or reloaded multiple times.
+* **Architecture Improvement:** Strengthened the separation between application logic and logging infrastructure, allowing future logging destinations to be added without changing the rest of the application.
+* **Foundation for Future Logging:** Prepared the project for upcoming lessons on rotating log files, custom GUI handlers, and thread-safe logging using Qt signals.
