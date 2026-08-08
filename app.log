@@ -1,85 +1,270 @@
-2026-08-06 03:29:43 [WARNING] [logger] ⚠️ Warning: No folder selected! Click 'Browse Directory' first.
-2026-08-06 03:30:06 [INFO] [logger] 📁 Folder selected: 'C:/Users/asads/Downloads'
-2026-08-06 03:30:08 [INFO] [logger] 🔍 Starting audit on: 'C:/Users/asads/Downloads'...
-2026-08-06 03:30:08 [INFO] [logger] file detected: 1.webp
-2026-08-06 03:30:08 [INFO] [logger] file detected: arsen-vivcharyk-dmRB6RXRpFk-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: brian-jones-YBlcnXfv9OM-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: bruno-guerrero--i6EJZjX0tg-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: bruno-guerrero-1Ef9P85_JPg-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: bruno-guerrero-kGR0GAZ4Z3s-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: bruno-guerrero-Ugb9Gaccxys-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: chef-with-trumpet.heic
-2026-08-06 03:30:08 [INFO] [logger] file detected: ChromeSetup.exe
-2026-08-06 03:30:08 [INFO] [logger] file detected: convertico-little-sorcerer-heif.heif
-2026-08-06 03:30:08 [INFO] [logger] file detected: creative-headline-APNnyM36puU-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: creative-headline-HGZkiOJ0Jeg-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: creative-headline-se3GNrXjtdQ-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: creative-headline-vD_qELkZaAs-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: day_34.txt
-2026-08-06 03:30:08 [INFO] [logger] file detected: desktop.ini
-2026-08-06 03:30:08 [INFO] [logger] file detected: fa4e2abf79fce071ed0970ebc04688e3.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: file_example_AVI_1920_2_3MG.avi
-2026-08-06 03:30:08 [INFO] [logger] file detected: file_example_MOV_1920_2_2MB.mov
-2026-08-06 03:30:08 [INFO] [logger] file detected: file_example_MP4_1920_18MG.mp4
-2026-08-06 03:30:08 [INFO] [logger] file detected: file_example_OGG_1920_13_3mg.ogg
-2026-08-06 03:30:08 [INFO] [logger] file detected: file_example_WEBM_1920_3_7MB.webm
-2026-08-06 03:30:08 [INFO] [logger] file detected: file_example_WMV_1920_9_3MB.wmv
-2026-08-06 03:30:08 [INFO] [logger] file detected: franki-change-l_udJiyHkPg-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: franki-change-sYTiDHS3dSU-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: franki-change-ylGqteuOcBM-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: gary-butterfield-hXnaKgbmeOk-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: gian-gomez-rYB1r1MoOXc-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: Git-2.55.0.2-64-bit (1).exe
-2026-08-06 03:30:08 [INFO] [logger] file detected: Git-2.55.0.2-64-bit.exe
-2026-08-06 03:30:08 [INFO] [logger] file detected: GitHubDesktopSetup-x64.exe
-2026-08-06 03:30:08 [INFO] [logger] file detected: greyhounds-looking-for-a-table.heic
-2026-08-06 03:30:08 [INFO] [logger] file detected: hand-painted-fox-design.zip
-2026-08-06 03:30:08 [INFO] [logger] file detected: heif-apple-circles.heif
-2026-08-06 03:30:08 [INFO] [logger] file detected: heif-bitcoin-color.heif
-2026-08-06 03:30:08 [INFO] [logger] file detected: hidde-schalm-aUtMy02DOo4-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: ivan-diaz-MOBnDtqE-kE-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: kuzu420-dancing-27562_512.gif
-2026-08-06 03:30:08 [INFO] [logger] file detected: lazaro-rodriguez-JhOFhLHKVx8-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: mandala-pattern-design-white-background.zip
-2026-08-06 03:30:08 [INFO] [logger] file detected: michael-sala-husQ4tkR8Z8-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: mxj_files-countdown-27669_512.gif
-2026-08-06 03:30:08 [INFO] [logger] file detected: mxj_files-duck-27445_512.gif
-2026-08-06 03:30:08 [INFO] [logger] file detected: mxj_files-planet-26932_512.gif
-2026-08-06 03:30:08 [INFO] [logger] file detected: mxj_files-star-26586_512.gif
-2026-08-06 03:30:08 [INFO] [logger] file detected: nina-pascal-Cld_DcgGPso-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: oskar-kadaksoo-H1cuGOjk8d8-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: oskar-smethurst-B1GtwanCbiw-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pascal-meier-1uVCTVSn-2o-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-0xcpt-27487530.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-aboodi-18435554.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-bibekghosh-14553713.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-ebahir-36476506.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-gmb-visuals-564876670-20727183.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-izafi-33061425.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-ja-kubislav-374578277-14585222.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-james-l-349383308-31327342.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-king-siberia-1123639-2201541.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-pavel-danilyuk-8424591.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-pixabay-270348.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-pixabay-270366.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: pexels-pixabay-270408.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: python-3.13.14-amd64.exe
-2026-08-06 03:30:08 [INFO] [logger] file detected: python-3.14.6-amd64.exe
-2026-08-06 03:30:08 [INFO] [logger] file detected: python-manager-26.2.msix
-2026-08-06 03:30:08 [INFO] [logger] file detected: sample-heif-compressed-60.heif
-2026-08-06 03:30:08 [INFO] [logger] file detected: shelf-christmas-decoration.heic
-2026-08-06 03:30:08 [INFO] [logger] file detected: sherry-christian-8Myh76_3M2U-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: soundboard.heic
-2026-08-06 03:30:08 [INFO] [logger] file detected: SteamSetup.exe
-2026-08-06 03:30:08 [INFO] [logger] file detected: sunder-muthukumaran-fd6K_OFlnRA-unsplash (1).jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: sunder-muthukumaran-fd6K_OFlnRA-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: test.py
-2026-08-06 03:30:08 [INFO] [logger] file detected: tobias-rademacher-LPi4gHZrL1w-unsplash.jpg
-2026-08-06 03:30:08 [INFO] [logger] file detected: videoplayback (1).webm
-2026-08-06 03:30:08 [INFO] [logger] file detected: videoplayback.mp4
-2026-08-06 03:30:08 [INFO] [logger] file detected: videoplayback.webm
-2026-08-06 03:30:08 [INFO] [logger] file detected: VSCodeUserSetup-x64-1.127.0.exe
-2026-08-06 03:30:08 [INFO] [logger] file detected: WhatsApp Video 2026-08-04 at 1.14.36 PM.mp4
-2026-08-06 03:30:08 [INFO] [logger] file detected: yellow-beauty-butterfly-insect-icon.zip
-2026-08-06 03:30:08 [INFO] [logger] file detected: zhengtao-tang-V7SKRhXskv8-unsplash.jpg
-2026-08-06 03:30:09 [INFO] [logger] ✅ Audit complete!
+2026-08-08 15:33:29 [INFO] [logger.py]:log_info:39- 📁 Folder selected: 'C:/Users/asads/Downloads'
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- 🔍 Starting audit on: 'C:/Users/asads/Downloads'...
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: 1.webp
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: arsen-vivcharyk-dmRB6RXRpFk-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: brian-jones-YBlcnXfv9OM-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: bruno-guerrero--i6EJZjX0tg-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: bruno-guerrero-1Ef9P85_JPg-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: bruno-guerrero-kGR0GAZ4Z3s-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: bruno-guerrero-Ugb9Gaccxys-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: chef-with-trumpet.heic
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: ChromeSetup.exe
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: convertico-little-sorcerer-heif.heif
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: creative-headline-APNnyM36puU-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: creative-headline-HGZkiOJ0Jeg-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: creative-headline-se3GNrXjtdQ-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: creative-headline-vD_qELkZaAs-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: day_34.txt
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: desktop.ini
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: fa4e2abf79fce071ed0970ebc04688e3.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: file_example_AVI_1920_2_3MG.avi
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: file_example_MOV_1920_2_2MB.mov
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: file_example_MP4_1920_18MG.mp4
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: file_example_OGG_1920_13_3mg.ogg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: file_example_WEBM_1920_3_7MB.webm
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: file_example_WMV_1920_9_3MB.wmv
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: franki-change-l_udJiyHkPg-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: franki-change-sYTiDHS3dSU-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: franki-change-ylGqteuOcBM-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: gary-butterfield-hXnaKgbmeOk-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: gian-gomez-rYB1r1MoOXc-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: Git-2.55.0.2-64-bit (1).exe
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: Git-2.55.0.2-64-bit.exe
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: GitHubDesktopSetup-x64.exe
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: greyhounds-looking-for-a-table.heic
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: hand-painted-fox-design.zip
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: heif-apple-circles.heif
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: heif-bitcoin-color.heif
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: hidde-schalm-aUtMy02DOo4-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: ivan-diaz-MOBnDtqE-kE-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: kuzu420-dancing-27562_512.gif
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: lazaro-rodriguez-JhOFhLHKVx8-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: mandala-pattern-design-white-background.zip
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: michael-sala-husQ4tkR8Z8-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: mxj_files-countdown-27669_512.gif
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: mxj_files-duck-27445_512.gif
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: mxj_files-planet-26932_512.gif
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: mxj_files-star-26586_512.gif
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: nina-pascal-Cld_DcgGPso-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: oskar-kadaksoo-H1cuGOjk8d8-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: oskar-smethurst-B1GtwanCbiw-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pascal-meier-1uVCTVSn-2o-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-0xcpt-27487530.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-aboodi-18435554.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-bibekghosh-14553713.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-ebahir-36476506.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-gmb-visuals-564876670-20727183.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-izafi-33061425.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-ja-kubislav-374578277-14585222.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-james-l-349383308-31327342.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-king-siberia-1123639-2201541.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-pavel-danilyuk-8424591.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-pixabay-270348.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-pixabay-270366.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: pexels-pixabay-270408.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: python-3.13.14-amd64.exe
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: python-3.14.6-amd64.exe
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: python-manager-26.2.msix
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: sample-heif-compressed-60.heif
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: shelf-christmas-decoration.heic
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: sherry-christian-8Myh76_3M2U-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: soundboard.heic
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: SteamSetup.exe
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: sunder-muthukumaran-fd6K_OFlnRA-unsplash (1).jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: sunder-muthukumaran-fd6K_OFlnRA-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: test.py
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: tobias-rademacher-LPi4gHZrL1w-unsplash.jpg
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: videoplayback (1).webm
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: videoplayback.mp4
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: videoplayback.webm
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: VSCodeUserSetup-x64-1.127.0.exe
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: WhatsApp Video 2026-08-04 at 1.14.36 PM.mp4
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: yellow-beauty-butterfly-insect-icon.zip
+2026-08-08 15:33:35 [INFO] [logger.py]:log_info:39- file detected: zhengtao-tang-V7SKRhXskv8-unsplash.jpg
+2026-08-08 15:33:36 [INFO] [logger.py]:log_info:39- ✅ Audit complete!
+2026-08-08 15:33:40 [INFO] [logger.py]:log_info:39- 🚀 Starting auto organizing on: 'C:/Users/asads/Downloads'...
+2026-08-08 15:39:49 [INFO] [logger.py]:log_info:39- 📁 Folder selected: 'C:/Users/asads/Downloads'
+2026-08-08 15:39:51 [INFO] [logger.py]:log_info:39- 🚀 Starting auto organizing on: 'C:/Users/asads/Downloads'...
+2026-08-08 15:39:51 [INFO] [logger.py]:log_info:39- Moved '1.webp' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:39:51 [INFO] [logger.py]:log_info:39- ✅Auto-Organizer process completed.
+2026-08-08 15:41:48 [INFO] [logger.py]:log_info:39- 📁 Folder selected: 'C:/Users/asads/Downloads'
+2026-08-08 15:41:50 [INFO] [logger.py]:log_info:39- 🚀 Starting auto organizing on: 'C:/Users/asads/Downloads'...
+2026-08-08 15:41:50 [INFO] [logger.py]:log_info:39- Moved 'arsen-vivcharyk-dmRB6RXRpFk-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:41:50 [INFO] [logger.py]:log_info:39- ✅Auto-Organizer process completed.
+2026-08-08 15:53:51 [INFO] [logger.py]:log_info:39- 📁 Folder selected: 'D:/Github/python_pipeline_core/media_organizer'
+2026-08-08 15:53:54 [INFO] [logger.py]:log_info:39- 🚀 Starting auto organizing on: 'D:/Github/python_pipeline_core/media_organizer'...
+2026-08-08 15:53:54 [INFO] [logger.py]:log_info:39- Moved 'logger.py' -> 'D:\Github\python_pipeline_core\media_organizer\Code'
+2026-08-08 15:53:54 [INFO] [logger.py]:log_info:39- Moved 'main.py' -> 'D:\Github\python_pipeline_core\media_organizer\Code'
+2026-08-08 15:53:54 [INFO] [logger.py]:log_info:39- Moved 'organizer.py' -> 'D:\Github\python_pipeline_core\media_organizer\Code'
+2026-08-08 15:53:54 [INFO] [logger.py]:log_info:39- Moved 'scanner.py' -> 'D:\Github\python_pipeline_core\media_organizer\Code'
+2026-08-08 15:53:54 [INFO] [logger.py]:log_info:39- Moved 'logger.cpython-314.pyc' -> 'D:\Github\python_pipeline_core\media_organizer\others'
+2026-08-08 15:53:54 [INFO] [logger.py]:log_info:39- Moved 'organizer.cpython-314.pyc' -> 'D:\Github\python_pipeline_core\media_organizer\others'
+2026-08-08 15:53:54 [INFO] [logger.py]:log_info:39- Moved 'scanner.cpython-314.pyc' -> 'D:\Github\python_pipeline_core\media_organizer\others'
+2026-08-08 15:53:54 [INFO] [logger.py]:log_info:39- ✅Auto-Organizer process completed.
+2026-08-08 15:56:28 [INFO] [logger.py]:log_info:39- 📁 Folder selected: 'C:/Users/asads/Downloads'
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- 🔍 Starting audit on: 'C:/Users/asads/Downloads'...
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: brian-jones-YBlcnXfv9OM-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: bruno-guerrero--i6EJZjX0tg-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: bruno-guerrero-1Ef9P85_JPg-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: bruno-guerrero-kGR0GAZ4Z3s-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: bruno-guerrero-Ugb9Gaccxys-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: chef-with-trumpet.heic
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: ChromeSetup.exe
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: convertico-little-sorcerer-heif.heif
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: creative-headline-APNnyM36puU-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: creative-headline-HGZkiOJ0Jeg-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: creative-headline-se3GNrXjtdQ-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: creative-headline-vD_qELkZaAs-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: day_34.txt
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: desktop.ini
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: fa4e2abf79fce071ed0970ebc04688e3.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: file_example_AVI_1920_2_3MG.avi
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: file_example_MOV_1920_2_2MB.mov
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: file_example_MP4_1920_18MG.mp4
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: file_example_OGG_1920_13_3mg.ogg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: file_example_WEBM_1920_3_7MB.webm
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: file_example_WMV_1920_9_3MB.wmv
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: franki-change-l_udJiyHkPg-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: franki-change-sYTiDHS3dSU-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: franki-change-ylGqteuOcBM-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: gary-butterfield-hXnaKgbmeOk-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: gian-gomez-rYB1r1MoOXc-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: Git-2.55.0.2-64-bit (1).exe
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: Git-2.55.0.2-64-bit.exe
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: GitHubDesktopSetup-x64.exe
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: greyhounds-looking-for-a-table.heic
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: hand-painted-fox-design.zip
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: heif-apple-circles.heif
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: heif-bitcoin-color.heif
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: hidde-schalm-aUtMy02DOo4-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: ivan-diaz-MOBnDtqE-kE-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: kuzu420-dancing-27562_512.gif
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: lazaro-rodriguez-JhOFhLHKVx8-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: mandala-pattern-design-white-background.zip
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: michael-sala-husQ4tkR8Z8-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: mxj_files-countdown-27669_512.gif
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: mxj_files-duck-27445_512.gif
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: mxj_files-planet-26932_512.gif
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: mxj_files-star-26586_512.gif
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: nina-pascal-Cld_DcgGPso-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: oskar-kadaksoo-H1cuGOjk8d8-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: oskar-smethurst-B1GtwanCbiw-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pascal-meier-1uVCTVSn-2o-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-0xcpt-27487530.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-aboodi-18435554.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-bibekghosh-14553713.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-ebahir-36476506.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-gmb-visuals-564876670-20727183.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-izafi-33061425.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-ja-kubislav-374578277-14585222.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-james-l-349383308-31327342.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-king-siberia-1123639-2201541.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-pavel-danilyuk-8424591.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-pixabay-270348.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-pixabay-270366.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: pexels-pixabay-270408.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: python-3.13.14-amd64.exe
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: python-3.14.6-amd64.exe
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: python-manager-26.2.msix
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: sample-heif-compressed-60.heif
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: shelf-christmas-decoration.heic
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: sherry-christian-8Myh76_3M2U-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: soundboard.heic
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: SteamSetup.exe
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: sunder-muthukumaran-fd6K_OFlnRA-unsplash (1).jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: sunder-muthukumaran-fd6K_OFlnRA-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: test.py
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: tobias-rademacher-LPi4gHZrL1w-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: videoplayback (1).webm
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: videoplayback.mp4
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: videoplayback.webm
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: VSCodeUserSetup-x64-1.127.0.exe
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: WhatsApp Video 2026-08-04 at 1.14.36 PM.mp4
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: yellow-beauty-butterfly-insect-icon.zip
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: zhengtao-tang-V7SKRhXskv8-unsplash.jpg
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: 1.webp
+2026-08-08 15:56:30 [INFO] [logger.py]:log_info:39- file detected: arsen-vivcharyk-dmRB6RXRpFk-unsplash.jpg
+2026-08-08 15:56:31 [INFO] [logger.py]:log_info:39- ✅ Audit complete!
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- 🚀 Starting auto organizing on: 'C:/Users/asads/Downloads'...
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'brian-jones-YBlcnXfv9OM-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'bruno-guerrero--i6EJZjX0tg-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'bruno-guerrero-1Ef9P85_JPg-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'bruno-guerrero-kGR0GAZ4Z3s-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'bruno-guerrero-Ugb9Gaccxys-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'chef-with-trumpet.heic' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'ChromeSetup.exe' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'convertico-little-sorcerer-heif.heif' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'creative-headline-APNnyM36puU-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'creative-headline-HGZkiOJ0Jeg-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'creative-headline-se3GNrXjtdQ-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'creative-headline-vD_qELkZaAs-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'day_34.txt' -> 'C:\Users\asads\Downloads\Documents'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'desktop.ini' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'fa4e2abf79fce071ed0970ebc04688e3.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'file_example_AVI_1920_2_3MG.avi' -> 'C:\Users\asads\Downloads\Videos'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'file_example_MOV_1920_2_2MB.mov' -> 'C:\Users\asads\Downloads\Videos'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'file_example_MP4_1920_18MG.mp4' -> 'C:\Users\asads\Downloads\Videos'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'file_example_OGG_1920_13_3mg.ogg' -> 'C:\Users\asads\Downloads\Audio'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'file_example_WEBM_1920_3_7MB.webm' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'file_example_WMV_1920_9_3MB.wmv' -> 'C:\Users\asads\Downloads\Videos'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'franki-change-l_udJiyHkPg-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'franki-change-sYTiDHS3dSU-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'franki-change-ylGqteuOcBM-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'gary-butterfield-hXnaKgbmeOk-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'gian-gomez-rYB1r1MoOXc-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'Git-2.55.0.2-64-bit (1).exe' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'Git-2.55.0.2-64-bit.exe' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'GitHubDesktopSetup-x64.exe' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'greyhounds-looking-for-a-table.heic' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'hand-painted-fox-design.zip' -> 'C:\Users\asads\Downloads\Archives'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'heif-apple-circles.heif' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'heif-bitcoin-color.heif' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'hidde-schalm-aUtMy02DOo4-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'ivan-diaz-MOBnDtqE-kE-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'kuzu420-dancing-27562_512.gif' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'lazaro-rodriguez-JhOFhLHKVx8-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'mandala-pattern-design-white-background.zip' -> 'C:\Users\asads\Downloads\Archives'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'michael-sala-husQ4tkR8Z8-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'mxj_files-countdown-27669_512.gif' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'mxj_files-duck-27445_512.gif' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'mxj_files-planet-26932_512.gif' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'mxj_files-star-26586_512.gif' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'nina-pascal-Cld_DcgGPso-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'oskar-kadaksoo-H1cuGOjk8d8-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'oskar-smethurst-B1GtwanCbiw-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'pascal-meier-1uVCTVSn-2o-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'pexels-0xcpt-27487530.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'pexels-aboodi-18435554.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'pexels-bibekghosh-14553713.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'pexels-ebahir-36476506.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'pexels-gmb-visuals-564876670-20727183.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'pexels-izafi-33061425.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'pexels-ja-kubislav-374578277-14585222.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:32 [INFO] [logger.py]:log_info:39- Moved 'pexels-james-l-349383308-31327342.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'pexels-king-siberia-1123639-2201541.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'pexels-pavel-danilyuk-8424591.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'pexels-pixabay-270348.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'pexels-pixabay-270366.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'pexels-pixabay-270408.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'python-3.13.14-amd64.exe' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'python-3.14.6-amd64.exe' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'python-manager-26.2.msix' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'sample-heif-compressed-60.heif' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'shelf-christmas-decoration.heic' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'sherry-christian-8Myh76_3M2U-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'soundboard.heic' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'SteamSetup.exe' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'sunder-muthukumaran-fd6K_OFlnRA-unsplash (1).jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'sunder-muthukumaran-fd6K_OFlnRA-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'test.py' -> 'C:\Users\asads\Downloads\Code'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'tobias-rademacher-LPi4gHZrL1w-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'videoplayback (1).webm' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'videoplayback.mp4' -> 'C:\Users\asads\Downloads\Videos'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'videoplayback.webm' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'VSCodeUserSetup-x64-1.127.0.exe' -> 'C:\Users\asads\Downloads\others'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'WhatsApp Video 2026-08-04 at 1.14.36 PM.mp4' -> 'C:\Users\asads\Downloads\Videos'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'yellow-beauty-butterfly-insect-icon.zip' -> 'C:\Users\asads\Downloads\Archives'
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- Moved 'zhengtao-tang-V7SKRhXskv8-unsplash.jpg' -> 'C:\Users\asads\Downloads\Images'
+2026-08-08 15:56:33 [WARNING] [logger.py]:log_warning:42- Skipped moving file '1.webp' - File already exist in Images
+2026-08-08 15:56:33 [WARNING] [logger.py]:log_warning:42- Skipped moving file 'arsen-vivcharyk-dmRB6RXRpFk-unsplash.jpg' - File already exist in Images
+2026-08-08 15:56:33 [INFO] [logger.py]:log_info:39- ✅Auto-Organizer process completed.

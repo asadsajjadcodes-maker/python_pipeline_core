@@ -13,14 +13,18 @@ if not logger.handlers: # # Prevent duplicate handlers
     file_handler.setLevel(logging.INFO)
 
     # Create the formate for log message
-    log_formatter = logging.Formatter(
-        fmt="%(asctime)s [%(levelname)s] [%(name)s] %(message)s",
+    console_formatter = logging.Formatter(
+        fmt="%(asctime)s [%(levelname)s] %(message)s",
+        datefmt= "%Y-%m-%d %H:%M:%S"
+    )
+    file_formatter = logging.Formatter(
+        fmt="%(asctime)s [%(levelname)s] [%(filename)s]:%(funcName)s:%(lineno)d- %(message)s",
         datefmt= "%Y-%m-%d %H:%M:%S"
     )
 
     # Attach the log formate to the handler  
-    console_handler.setFormatter(log_formatter)
-    file_handler.setFormatter(log_formatter)
+    console_handler.setFormatter(console_formatter)
+    file_handler.setFormatter(file_formatter)
 
     # Attach the handler to the logger 
     logger.addHandler(console_handler)

@@ -15,6 +15,7 @@ from PySide6.QtWidgets import (
 )
 from scanner import path_test
 from logger import log_info, log_warning, log_error
+from organizer import organize_folder
 
 # ==============================================================================
 # 1. THE DARK MODE PAINT JOB (QSS)
@@ -104,8 +105,8 @@ class MainWindow(QMainWindow):
         self.inspect_button.clicked.connect(self.run_audit)
         button_layout.addWidget(self.inspect_button)
 
-        self.auto_arrange_button = QPushButton("Run Manager")
-        self.auto_arrange_button.clicked.connect(self.run_manager)
+        self.auto_arrange_button = QPushButton("Run Organizer")
+        self.auto_arrange_button.clicked.connect(self.run_organizer)
         button_layout.addWidget(self.auto_arrange_button)
 
         # Live Progress Bar
@@ -173,7 +174,7 @@ class MainWindow(QMainWindow):
         self.show_message("✅ Audit complete!")
         log_info("✅ Audit complete!")
             
-    def run_manager(self):
+    def run_organizer(self):
         folder = self.path_box.text().strip()
         if not folder:
             self.show_message("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
@@ -182,16 +183,28 @@ class MainWindow(QMainWindow):
 
         self.show_message(f"🚀 Starting auto organizing on: '{folder}'...")
         log_info(f"🚀 Starting auto organizing on: '{folder}'...")
-        self.progress_bar.setValue(0)
-        
-        for percent in range(1, 101, 25):
-            time.sleep(0.08)
-            self.progress_bar.setValue(percent)
-            QApplication.processEvents()
+        self.progress_bar.setValue(10)
+        QApplication.processEvents()
 
+        # Execute file organization logic 
+        result = organize_folder(folder)
+
+        self.progress_bar.setValue(80)
+        QApplication.processEvents()
+
+        if "error" in result:
+            self.show_message(f"❌error: {result['error']}")
+        elif "info" in result:
+            self.show_message(f"ℹ️ {result['info']}")
+        else:
+            self.show_message(f"✅Organization completed! moved {result['moved']} file(s).")
+            for category, count in result["categories"].items():
+                self.show_message(f"📁{category} : {count} file(s)")
+                if result["skipped"] > 0:
+                    self.show_message(f" ⚠️Skipped {result['skipped']} duplicate file(s)")
         self.progress_bar.setValue(100)
-        self.show_message("✅ Auto organizing simulation complete!")
-        log_info("✅ Auto organizing simulation complete!")
+        log_info(f"✅Auto-Organizer process completed.")
+        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
