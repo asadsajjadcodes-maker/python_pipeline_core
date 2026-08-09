@@ -1,16 +1,24 @@
 import logging
+from gui_handler import GuiHandler
 
 # Create the logger 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 if not logger.handlers: # # Prevent duplicate handlers
+
     #  Create the StreamHandler 
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.INFO)
+
     # Create the file handler 
     file_handler = logging.FileHandler("app.log", mode="a", encoding="utf-8")
     file_handler.setLevel(logging.INFO)
+
+    # GUI handler 
+    gui_handler = GuiHandler()
+    gui_handler.setLevel(logging.INFO)
+
 
     # Create the formate for log message
     console_formatter = logging.Formatter(
@@ -21,15 +29,20 @@ if not logger.handlers: # # Prevent duplicate handlers
         fmt="%(asctime)s [%(levelname)s] [%(filename)s]:%(funcName)s:%(lineno)d- %(message)s",
         datefmt= "%Y-%m-%d %H:%M:%S"
     )
+    gui_formatter = logging.Formatter(
+        fmt= "[%(levelname)s] %(message)s"
+    )
+
 
     # Attach the log formate to the handler  
     console_handler.setFormatter(console_formatter)
     file_handler.setFormatter(file_formatter)
+    gui_handler.setFormatter(gui_formatter)
 
     # Attach the handler to the logger 
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
-
+    logger.addHandler(gui_handler)
 
 
 
@@ -45,3 +58,4 @@ def log_error(message : str) -> None:
     logger.error(message)
 
 
+log_info("Asad Sajjad")
