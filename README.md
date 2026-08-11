@@ -44,14 +44,14 @@ A repository dedicated to mastering Python automation, core programming workflow
 | **Lesson 36** | Logging Architecture & StreamHandler | Replaced `logging.basicConfig()` with an explicit `StreamHandler`, configured the logger manually, introduced logger-to-handler architecture, and gained a deeper understanding of how log records flow from the application to their output destinations. | ✅ Done |
 | **Lesson 37** | Multi-Destination Logging with FileHandler | Extended the logging system by adding a dedicated `FileHandler`, allowing a single log message to be written to both the terminal and `app.log`. | ✅ Done |
 | **Lesson 38** | Specialized Multi-Destination Logging & Auto-Organizer Module | Integrated `organizer.py` for automated extension mapping and safe file relocation. Configured distinct formatters for console and file logging to capture module metadata, function names, and line numbers. | ✅ Done |
-| **Lesson 39** | Custom GuiHandler & Triple-Destination Logging Architecture | Subclassed `logging.Handler` to create `GuiHandler`, attached it alongside `StreamHandler` and `FileHandler` in `logger.py`, and set up independent log formatters across standard output, disk logs, and terminal GUI output. | ✅ Done |
+| **Lesson 39** | Qt Signal-Slot Logging Bridge & GuiHandler Integration | Enhanced `GuiHandler` with PySide6 `QObject` and custom `Signal(str)`, attaching its signal directly to `MainWindow` to automatically stream application log streams straight into the UI text edit widget. | ✅ Done |
 
 ---
 
 ## 🛠️ Tech Stack & Core Modules
 * **Language:** Python 3.13+
 * **Core Modules Used:** 
-  * `PySide6` (Qt for Python GUI framework with custom QSS styling)
+  * `PySide6` (Qt for Python GUI framework with custom QSS styling and Signals)
   * `argparse` (CLI flag and argument parser)
   * `pathlib` (Object-oriented filesystem paths)
   * `json` (JavaScript Object Notation encoder and decoder)
@@ -96,50 +96,50 @@ Transitioning pipeline tools to a Graphical User Interface using PySide6 widgets
 
 ### Day 31: Multi-Action Desktop GUI & Directory Dialogs
 Extending the PySide6 Media Asset Manager with dynamic file dialogs and action handlers:
-* **Native OS Directory Picker (`QFileDialog`)**: Integrated `QFileDialog.getExistingDirectory` to allow users to interactively pick target workspace folders directly[cite: 34].
-* **Multi-Action Command Triggers**: Wired distinct push buttons (`Browse Directory`, `Run Audit`, `Run Manager`) to dedicated event handler methods (`folder_dialog`, `run_audit`, `run_organizer`)[cite: 34].
-* **Real-time Console Feedback**: Implemented defensive input checks in `run_audit` and `run_organizer` to alert users when no directory is selected before executing actions[cite: 34].
+* **Native OS Directory Picker (`QFileDialog`)**: Integrated `QFileDialog.getExistingDirectory` to allow users to interactively pick target workspace folders directly[cite: 39].
+* **Multi-Action Command Triggers**: Wired distinct push buttons (`Browse Directory`, `Run Audit`, `Run Organizer`) to dedicated event handler methods (`folder_dialog`, `run_audit`, `run_organizer`)[cite: 39].
+* **Real-time Console Feedback**: Implemented defensive input checks in `run_audit` and `run_organizer` to alert users when no directory is selected before executing actions[cite: 39].
 
 ### Day 32: Modern QSS Styling & Visual Feedback Interface
 Overhauling the desktop GUI design using Qt Stylesheets (QSS) and visual task indicators:
-* **Custom UI Aesthetics**: Applied modern CSS/QSS styling to customize buttons, header typography ("⚡ Pro Media Asset Manager"), input path bars, and container margins[cite: 34].
-* **Dark Console & Log Indicators**: Styled the read-only console area with a dark terminal background (`#11111B`) and color-coded status icons (⚠️ warnings, 🚀 operations, ✅ completion status)[cite: 34].
-* **Progress Bar Integration**: Added a stylized execution progress bar to provide real-time visual completion percentages during background audit and organization processes[cite: 34].
+* **Custom UI Aesthetics**: Applied modern CSS/QSS styling to customize buttons, header typography ("⚡ Pro Media Asset Manager"), input path bars, and container margins[cite: 39].
+* **Dark Console & Log Indicators**: Styled the read-only console area with a dark terminal background (`#11111B`) and color-coded status icons (⚠️ warnings, 🚀 operations, ✅ completion status)[cite: 39].
+* **Progress Bar Integration**: Added a stylized execution progress bar to provide real-time visual completion percentages during background audit and organization processes[cite: 39].
 
 ### Day 33: Live Backend-GUI Integration & Dynamic Progress
-Linking backend `pathlib` file scanner functions directly to the PySide6 desktop interface[cite: 34, 36]:
-* **Modular Backend Integration**: Connected `scanner.py` (`path_test`) into the main window driver (`main.py`) to execute live recursive asset scans (`rglob("*")`) on disk[cite: 34, 36].
-* **Dynamic Progress Percentage Calculations**: Iterated through scanned asset lists, calculating execution progress as `int((index / total_files) * 100)` to update `QProgressBar` in real time[cite: 34].
-* **Live GUI Frame Refreshing**: Integrated `QApplication.processEvents()` inside iteration loops to force PySide to render live console text and progress updates without freezing the interface[cite: 34].
+Linking backend `pathlib` file scanner functions directly to the PySide6 desktop interface[cite: 39, 41]:
+* **Modular Backend Integration**: Connected `scanner.py` (`path_test`) into the main window driver (`main.py`) to execute live recursive asset scans (`rglob("*")`) on disk[cite: 39, 41].
+* **Dynamic Progress Percentage Calculations**: Iterated through scanned asset lists, calculating execution progress as `int((index / total_files) * 100)` to update `QProgressBar` in real time[cite: 39].
+* **Live GUI Frame Refreshing**: Integrated `QApplication.processEvents()` inside iteration loops to force PySide to render live console text and progress updates without freezing the interface[cite: 39].
 
 ### Day 34: UI Message Abstraction & Logging Preparation
-Preparing the Media Asset Manager for a professional logging system by separating user interface messaging from backend operations[cite: 34]:
-* **Centralized GUI Messaging**: Introduced a dedicated `show_message()` helper inside `MainWindow` to encapsulate all `QTextEdit` updates[cite: 34].
-* **Reduced Code Duplication**: Standardized message routing to streamline user interface updates and simplify logging integration[cite: 34].
-* **Separation of Concerns**: Isolated UI component operations from core processing logic to build a maintainable application architecture[cite: 34].
+Preparing the Media Asset Manager for a professional logging system by separating user interface messaging from backend operations[cite: 39]:
+* **Centralized GUI Messaging**: Introduced a dedicated `show_message()` helper inside `MainWindow` to encapsulate all `QTextEdit` updates[cite: 39].
+* **Reduced Code Duplication**: Standardized message routing to streamline user interface updates and simplify logging integration[cite: 39].
+* **Separation of Concerns**: Isolated UI component operations from core processing logic to build a maintainable application architecture[cite: 39].
 
 ### Lesson 35: Integrated Multi-Module Logging Engine
-Integrating Python's standard `logging` library across the backend scanner and PySide6 application layers[cite: 33, 34, 36]:
-* **Dedicated Logging Module (`logger.py`)**: Designed a centralized logging utility configuring severity levels (`INFO`, `WARNING`, `ERROR`) and helper functions (`log_info`, `log_warning`, `log_error`)[cite: 33].
-* **Backend File Telemetry**: Integrated logging statements directly into `scanner.py` (`path_test`) to log detected files, missing paths, and execution errors automatically during recursive directory scans[cite: 36].
-* **Dual GUI & System Telemetry**: Synchronized user-facing UI updates (`show_message()`) with systemic application logging inside `main.py` across all main window actions[cite: 34].
+Integrating Python's standard `logging` library across the backend scanner and PySide6 application layers[cite: 38, 39, 41]:
+* **Dedicated Logging Module (`logger.py`)**: Designed a centralized logging utility configuring severity levels (`INFO`, `WARNING`, `ERROR`) and helper functions (`log_info`, `log_warning`, `log_error`)[cite: 38].
+* **Backend File Telemetry**: Integrated logging statements directly into `scanner.py` (`path_test`) to log detected files, missing paths, and execution errors automatically during recursive directory scans[cite: 41].
+* **Dual GUI & System Telemetry**: Synchronized user-facing UI updates (`show_message()`) with systemic application logging inside `main.py` across all main window actions[cite: 39].
 
 ### Lesson 36: Logging Architecture & StreamHandler
-Moving beyond `logging.basicConfig()` to understand the internal architecture of Python's logging framework.
+Moving beyond `logging.basicConfig()` to understand the internal architecture of Python's logging framework:
 * **Manual Logger Configuration:** Replaced `logging.basicConfig()` with an explicitly configured `StreamHandler`, providing greater control over how log messages are processed.
 * **Understanding Logging Architecture:** Learned the relationship between the application, logger, handlers, formatter, and final output destination.
 * **StreamHandler:** Configured a dedicated `StreamHandler` responsible for sending log messages to the terminal while keeping the logger independent of the output destination.
 
 ### Lesson 37: Multi-Destination Logging with FileHandler
-Expanding the logging system from a single output destination to a reusable multi-handler architecture[cite: 33]:
-* **FileHandler Integration:** Added a dedicated `FileHandler` to automatically write application logs to `app.log` while preserving terminal output[cite: 33].
-* **Duplicate Handler Prevention:** Introduced `if not logger.handlers:` to prevent duplicate handlers from being attached when the logging module is imported multiple times[cite: 33].
+Expanding the logging system from a single output destination to a reusable multi-handler architecture[cite: 38]:
+* **FileHandler Integration:** Added a dedicated `FileHandler` to automatically write application logs to `app.log` while preserving terminal output[cite: 38].
+* **Duplicate Handler Prevention:** Introduced `if not logger.handlers:` to prevent duplicate handlers from being attached when the logging module is imported multiple times[cite: 38].
 
 ### Lesson 38: Specialized Multi-Destination Logging & Auto-Organizer Module
-Created `organizer.py` for automated extension mapping and safe file relocation[cite: 35]. Configured distinct formatters for console and file logging to capture module metadata, function names, and line numbers[cite: 33].
+Created `organizer.py` for automated extension mapping and safe file relocation[cite: 40]. Configured distinct formatters for console and file logging to capture module metadata, function names, and line numbers[cite: 38].
 
-### Lesson 39: Custom GuiHandler & Triple-Destination Logging Architecture
-Building a dedicated GUI handler and integrating multi-destination log streams[cite: 32, 33]:
-* **Custom Logging Handler Subclass (`gui_handler.py`)**: Subclassed `logging.Handler` to create `GuiHandler`, overriding `emit()` to intercept log records specifically for GUI delivery[cite: 32].
-* **Triple-Destination Pipeline**: Attached `GuiHandler` alongside `StreamHandler` and `FileHandler` in `logger.py`, completing a multi-destination telemetry architecture[cite: 33].
-* **Isolated Log Formatting**: Applied a clean `gui_formatter` (`[%(levelname)s] %(message)s`) to keep GUI-bound log text focused and concise[cite: 33].
+### Lesson 39: Qt Signal-Slot Logging Bridge & GuiHandler Integration
+Connecting Python logging handlers directly to PySide6 visual components via Qt Signals[cite: 37, 38, 39]:
+* **Qt Multiple Inheritance (`QObject` + `logging.Handler`)**: Configured `GuiHandler` in `gui_handler.py` to inherit from both `QObject` and `logging.Handler`, setting up `log_message = Signal(str)` to safely emit messages across execution contexts[cite: 37].
+* **Signal-to-Widget Pipeline Binding**: Connected `gui_handler.log_message.connect(self.show_message)` directly in `main.py`, dynamically routing all `log_info`, `log_warning`, and `log_error` calls from backend modules (`organizer.py`, `scanner.py`) straight into the GUI console display[cite: 38, 39, 40, 41].
+* **Decoupled Architecture**: Cleaned up manual `self.show_message()` calls in `main.py` to rely completely on standard logging calls, securing a clean separation of concerns across standard terminal output, disk log files, and visual UI screens[cite: 38, 39].

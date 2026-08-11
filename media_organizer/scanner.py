@@ -1,33 +1,44 @@
 from pathlib import Path
 from logger import log_info, log_warning, log_error
 
-def path_test(file_path):
+def path_test(file_path: str):
+    """
+    Scans a folder path, logs discovered files, and returns a list of file log entries or an error message.
+    """
     dir_path = Path(file_path).resolve()
-    if not dir_path.exists():
-        log_warning(f"The selected folder '{dir_path}' does not exist.")
-        return f"The selected folder '{dir_path}' does not exist."
     
-    elif not dir_path.is_dir():
-        log_warning(f"'{dir_path}' you selected is not a folder.")
-        return f"'{dir_path}' you selected is not a folder."
-    else:
+    # Check if directory exists
+    if not dir_path.exists():
+        msg = f"The selected folder '{dir_path}' does not exist."
+        log_warning(msg)
+        return msg
+    
+    # Check if path is a directory
+    if not dir_path.is_dir():
+        msg = f"'{dir_path}' you selected is not a folder."
+        log_warning(msg)
+        return msg
+
+    try:
         file_list = list(dir_path.rglob("*"))
         detected_files = []
 
-        try:
-            for file in file_list:
-                if file.is_file():
-                    log_info(f"file detected: {file.name}")
-                    detected_files.append(f"file detected: {file.name}")
-            
-            # If no files were found in the folder/subfolders
-            if not detected_files:
-                log_warning("No files found in the directory.")
-                return "No files found in the directory."
+        # Iterate over contents and log individual file occurrences
+        for file in file_list:
+            if file.is_file():
+                msg = f"file detected: {file.name}"
+                log_info(msg)
+                detected_files.append(msg)
+        
+        # If no files were found
+        if not detected_files:
+            msg = "No files found in the directory."
+            log_warning(msg)
+            return msg
 
-            # Join all results into a single newline-separated string
-            return detected_files
+        return detected_files
 
-        except Exception as err:
-            log_error(f"Failed scanning the {file.name}: {err}")
-            return f"Failed scanning the directory: {err}"
+    except Exception as err:
+        err_msg = f"Failed scanning the directory: {err}"
+        log_error(err_msg)
+        return err_msg

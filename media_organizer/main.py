@@ -1,5 +1,4 @@
 import sys
-import time
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow, 
@@ -14,12 +13,10 @@ from PySide6.QtWidgets import (
     QProgressBar
 )
 from scanner import path_test
-from logger import log_info, log_warning, log_error
+from logger import log_info, log_warning, log_error, gui_handler
 from organizer import organize_folder
 
-# ==============================================================================
-# 1. THE DARK MODE PAINT JOB (QSS)
-# ==============================================================================
+# Styling configuration
 DARK_THEME = """
 QMainWindow {
     background-color: #1E1E2E;
@@ -70,10 +67,10 @@ QProgressBar::chunk {
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("📷 Media Asset Manager | asad.sajjad.codes@gmail.com") 
-        self.resize(700, 480)  
+        self.setWindowTitle("📷 Media Asset Manager | asad.sajjad.codes@gmail.com")
+        self.resize(700, 480)
 
-        # Main canvas layout
+        # Canvas layout setup
         main_canvas = QWidget()
         self.setCentralWidget(main_canvas)
 
@@ -85,11 +82,11 @@ class MainWindow(QMainWindow):
         self.title_label.setStyleSheet("font-size: 22px; color: #89B4FA;")
         main_layout.addWidget(self.title_label)
 
-        # Folder Input Row
+        # Directory selection controls
         input_layout = QHBoxLayout()
         main_layout.addLayout(input_layout)
         
-        self.path_box = QLineEdit() 
+        self.path_box = QLineEdit()
         self.path_box.setPlaceholderText("Click 'Browse Directory' to pick a folder...")
         input_layout.addWidget(self.path_box)
 
@@ -97,7 +94,7 @@ class MainWindow(QMainWindow):
         self.browse_button.clicked.connect(self.folder_dialog)
         input_layout.addWidget(self.browse_button)
 
-        # Action Buttons Row
+        # Processing trigger buttons
         button_layout = QHBoxLayout()
         main_layout.addLayout(button_layout)
 
@@ -109,50 +106,45 @@ class MainWindow(QMainWindow):
         self.auto_arrange_button.clicked.connect(self.run_organizer)
         button_layout.addWidget(self.auto_arrange_button)
 
-        # Live Progress Bar
+        # Live Progress Display
         self.progress_bar = QProgressBar()
         self.progress_bar.setValue(0)
         main_layout.addWidget(self.progress_bar)
 
-        # Output Log Screen
+        # Log Text Area
         self.display_screen = QTextEdit()
         self.display_screen.setReadOnly(True)
         main_layout.addWidget(self.display_screen)
 
+        # Connect shared GUI handler signal to display_screen writer method
+        gui_handler.log_message.connect(self.show_message)
+        log_info("GUI triple-logging system initialized successfully.")
 
-
-    # Centralized GUI messaging helper.
-    # All user-facing messages pass through this method,
-    # making future logging integration much easier.
-    
-    def show_message(self, message: str) -> None: # takes a string and returns None
+    def show_message(self, message: str) -> None:
+        """Appends formatted messages directly to the UI screen."""
         self.display_screen.append(message)
-        
 
-
-    def folder_dialog(self):
+    def folder_dialog(self) -> None:
+        """Opens folder picker dialog and sets selected directory path."""
         selected_folder = QFileDialog.getExistingDirectory(self, "Select Asset Directory", "")
         if selected_folder:
             self.path_box.setText(selected_folder)
-            self.show_message(f"📁 Folder selected: '{selected_folder}'")
             log_info(f"📁 Folder selected: '{selected_folder}'")
 
-    def run_audit(self):
+    def run_audit(self) -> None:
+        """Scans folder items and tracks status via live logs and progress."""
         folder = self.path_box.text().strip()
         if not folder:
-            self.show_message("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
             log_warning("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
             return
 
-        self.show_message(f"🔍 Starting audit on: '{folder}'...")
         log_info(f"🔍 Starting audit on: '{folder}'...")
-        self.progress_bar.setValue(0) # Reset progress bar
+        self.progress_bar.setValue(0)
 
         data = path_test(folder)
 
-        # If path_test returned an error message string instead of a list
         if isinstance(data, str):
-            self.show_message(data)
+            log_warning(data)
             return
 
         total_files = len(data)
@@ -160,55 +152,46 @@ class MainWindow(QMainWindow):
             self.progress_bar.setValue(100)
             return
 
-        # Loop through files and dynamically update progress
-        for index, file in enumerate(data, start=1):
-            self.show_message(file)
-
-            # Calculate completion percentage
+        for index, file_msg in enumerate(data, start=1):
             progress = int((index / total_files) * 100)
             self.progress_bar.setValue(progress)
-
-            # Force PySide to refresh the UI screen live
             QApplication.processEvents()
 
-        self.show_message("✅ Audit complete!")
         log_info("✅ Audit complete!")
-            
-    def run_organizer(self):
+
+    def run_organizer(self) -> None:
+        """Executes auto-organizer logic and updates GUI components."""
         folder = self.path_box.text().strip()
         if not folder:
-            self.show_message("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
             log_warning("⚠️ Warning: No folder selected! Click 'Browse Directory' first.")
             return
 
-        self.show_message(f"🚀 Starting auto organizing on: '{folder}'...")
         log_info(f"🚀 Starting auto organizing on: '{folder}'...")
         self.progress_bar.setValue(10)
         QApplication.processEvents()
 
-        # Execute file organization logic 
         result = organize_folder(folder)
 
         self.progress_bar.setValue(80)
         QApplication.processEvents()
 
         if "error" in result:
-            self.show_message(f"❌error: {result['error']}")
+            log_error(result["error"])
         elif "info" in result:
-            self.show_message(f"ℹ️ {result['info']}")
+            log_info(result["info"])
         else:
-            self.show_message(f"✅Organization completed! moved {result['moved']} file(s).")
             for category, count in result["categories"].items():
-                self.show_message(f"📁{category} : {count} file(s)")
-                if result["skipped"] > 0:
-                    self.show_message(f" ⚠️Skipped {result['skipped']} duplicate file(s)")
+                log_info(f"📁 {category}: {count} file(s) moved")
+            if result["skipped"] > 0:
+                log_warning(f"⚠️ Skipped {result['skipped']} file(s) due to destination conflicts.")
+
         self.progress_bar.setValue(100)
-        log_info(f"✅Auto-Organizer process completed.")
-        
+        log_info("✅ Auto-Organizer process completed.")
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app.setStyleSheet(DARK_THEME)  # Apply global styling
+    app.setStyleSheet(DARK_THEME)
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
