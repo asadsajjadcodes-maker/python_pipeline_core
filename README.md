@@ -14,7 +14,7 @@
 
 **Python Pipeline Core** is a structured engineering repository focused on building reliable Python automation workflows, fault-tolerant JSON/file pipelines, CLI batch utilities, and a modern QSS-styled **PySide6 Media Asset Manager**.
 
-The repository progresses through **39 hands-on engineering lessons**—starting from object-oriented path manipulation (`pathlib`) and defensive JSON serialization, scaling to 10,000+ file batch verification engines, and culminating in a multi-module desktop GUI application with triple-channel logging (`GUI` + `FileHandler` + `StreamHandler`).
+The repository contains **30 root daily scripts (`day_01_basics.py`–`day_30_gui_basics.py`)** covering `pathlib`, defensive JSON serialization, and 10,000+ file CLI batch verification, along with a modular scanner package (`day_29_modular/`) and the multi-module **Pro Media Asset Manager** desktop GUI (`media_organizer/`, developed across stages 31–39).
 
 ---
 
@@ -51,7 +51,7 @@ python day_29_modular/main.py
 
 ```text
 python_pipeline_core/
-├── media_organizer/               # PySide6 Desktop Media Asset Manager (Lessons 31–39)
+├── media_organizer/               # PySide6 Desktop Media Asset Manager (Stages 31–39)
 │   ├── main.py                    # QMainWindow GUI, QSS dark theme & event controllers
 │   ├── organizer.py               # Extension-mapped auto-organizer with collision protection
 │   ├── scanner.py                 # Recursive pathlib directory scanner
@@ -63,7 +63,7 @@ python_pipeline_core/
 │   ├── asset_scanner.py           # Media classification & MB size calculation
 │   └── logger_config.py           # Reusable dual-channel logger setup
 │
-├── day_01_basics.py ... day_30_gui_basics.py  # 30 progressive pipeline scripts
+├── day_01_basics.py ... day_30_gui_basics.py  # 30 standalone root pipeline scripts
 ├── asset_config.json              # Sample nested asset configuration file
 ├── .gitattributes
 ├── .gitignore
@@ -72,7 +72,7 @@ python_pipeline_core/
 
 ---
 
-## 📅 39-Lesson Engineering Progression
+## 📅 Daily Progress Tracker (`day_01`–`day_30` Root Scripts & `media_organizer/` Stages 31–39)
 
 | Stage | Topic | Core Engineering Focus | Status |
 | :--- | :--- | :--- | :---: |
